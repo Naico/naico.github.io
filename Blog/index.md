@@ -1,19 +1,18 @@
 ---
 layout: default
-title: Naico
-category: blog
+title: Blogs
 ---
 
 
-<section class="inner">
-  <ul class="posts">
-    {% for post in site.posts %}
-	  <li class="listing-item">
-		<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-		<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-	  </li>
-    {% endfor %}
-  </ul>
-  <p>[<a href="#top" target="_self"><i>go top</i></a>]</p>
-</section>
+<div class="case-studies-body">
+	<ul class="listing">
+		{% assign projects = site.posts | sort: 'listing-priority' %}
+		{% for project in projects %}
+		<li>
+			<h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+			{{ project.content }}
+		</li>
+		{% endfor %}
+	</ul>
+</div>
 
