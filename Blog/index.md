@@ -1,123 +1,70 @@
 ---
-layout: defaultcn
+layout: default
+title: Kun Wang - Blog
+category: blog
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+<!-- -------------------------------------------------------------- -->
+<!-- Two tab pages for classification ----------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<div class="row">
+<a class="button btn-primary" href="/blog/index.html">By year</a>
+<a class="button btn-primary" href="/blog/categories.html">By categories</a>
+</div>
 
-There should be whitespace between paragraphs.
+<!-- -------------------------------------------------------------- -->
+<!-- Collection of Nice Blogs ------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<section class="inner">
+  <ul class="posts">
+    {% for post in site.posts %}
+	  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
+	  {% if year != y %}
+		{% assign year = y %}
+		<h3><li class="listing-seperator">{{ y }}</li></h3>
+	  {% endif %}
+	  <li class="listing-item">
+		<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+		<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+	  </li>
+    {% endfor %}
+  </ul>
+  <p>[<a href="#top" target="_self"><i>go top</i></a>]</p>
+</section>
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+<br>
+<!-- -------------------------------------------------------------- -->
+<!-- Collection of Nice Blogs ------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<!-- <section class="inner">
+<hr>
+<h3>Blogroll</h3><a name="blogs"></a>
+<ul>
+{% for piece in site.data.blogSites %}
+  <div>
+    <li> 
+	    <p><a href="{{ piece.url }}"><strong><i>{{ piece.title }}</i></strong></a>, 
+	    {{ piece.creator }}, {{ piece.description }}
+	</li>
+  </div>
+{% endfor %}
+</ul>
+<p>[<a href="#top" target="_self"><i>go top</i></a>]</p>
+</section> -->
+<!-- <br> -->
+<!-- -------------------------------------------------------------- -->
+<!-- My famous quotes --------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+<section class="inner">
+<hr>
+<h3>On Quantum Computation</h3><a name="blogs"></a>
 
-# [](#header-1)Header 1
+{% for piece in site.data.quotations %}
+<blockquote>
+	<p>{{ piece.content }}<span style="float:right">- {{ piece.creator }}</span></p>
+</blockquote>
+{% endfor %}
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+  <p>[<a href="#top" target="_self"><i>go top</i></a>]</p>
+</section>

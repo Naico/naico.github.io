@@ -29,7 +29,15 @@
                 <li><a href="/"><strong>Index</strong></a></li>
                 <li><a href="/Blog"><strong>Blog</strong></a></li>
                 <li><a href="#"><strong>CV</strong></a></li>
-                <li>{{ site.baseurl }}{% post_url 2010-07-21-name-of-post %}</li>
+            </ul>
+            <ul class="listing">
+                {% assign projects = site.projects | sort: 'listing-priority' %}
+                {% for project in projects %}
+                <li>
+                    <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+                    {{ project.content }}
+                </li>
+                {% endfor %}
             </ul>
         </header>
         <section>
