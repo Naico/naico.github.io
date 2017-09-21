@@ -9,6 +9,7 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">## {{ post.title }}</a>
+      [Link to a post]({{ post.url }})
     </li>
   {% endfor %}
 </ul>
