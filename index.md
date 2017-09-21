@@ -1,23 +1,14 @@
 ---
 layout: default
-title: Homepage
 ---
 ## Welcome to Naico's Homepage
 
 ```
 Talk is cheap, show me the code.
-                                _- Linus Torvalds_
+                                _Linus Torvalds_
 ```
 
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](another-page).
-
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # [](#header-1)Header 1
 
