@@ -86,8 +86,7 @@ header {
         position: fixed;
         z-index: 1;
         right: 6px;
-        top: 6px;
-        height: 30px;
+        top: 50%;
         line-height: 30px;
         padding: 1px 0;
         background: #5198DF;
@@ -116,21 +115,19 @@ header {
         }
         li+li {
             width: 78px;
-            border-top: 1px solid #3A7CBE;
+            border-top: 1px solid #f8f8f2;
         }
         li+li+li {            
-            border-top: 1px solid #3A7CBE;
+            border-top: 1px solid #f8f8f2;
             width: 79px;
         }
         a {
-            line-height: 1;
             font-size: 11px;
             color: #fff;
             color: rgba(#fff, 0.8);
             display: block;
             text-align: center;
             font-weight: 400;
-            padding-top: 6px;
             height: 40px;
             text-shadow: rgba(#000, 0.4) 0 -1px 0;
             strong {
