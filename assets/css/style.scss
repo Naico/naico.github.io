@@ -14,3 +14,24 @@ p.photo-wrap, img.my-photo{
     height: 100px;
     border-radius: 50%;
 }
+
+nav {
+    margin: 0 auto;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        width: 80px;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        border-right: 1px solid #3A7CBE;
+        &.single {
+                border: none;
+        }
+    }
+}
