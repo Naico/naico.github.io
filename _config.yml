@@ -1,11 +1,8 @@
 theme: jekyll-theme-modernist
-title: Naico Wang
-Description: My Profile
-
+title: Naico (HongYu) Wang
+Description: Software Developer Engineer
 timezone: Asia/ShangHai
-
 permalink: pretty
-
 collections:
   posts:
     output: true
