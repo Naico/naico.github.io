@@ -19,19 +19,41 @@ nav {
     margin: 0 auto;
 
     ul {
+        height: 30px;
         margin: 0;
         padding: 0;
         list-style: none;
-    }
-
-    li {
-        width: 80px;
-        float: left;
-        height: 30px;
-        line-height: 30px;
-        border-right: 1px solid #3A7CBE;
-        &.single {
-                border: none;
+        background: #5198DF;
+        background: linear_gradient(#77B9FB, #3782CD);
+        border-radius: 5px;
+        li {
+            width: 80px;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            border-right: 1px solid #B2D2E1;
+            &.single {
+                    border: none;
+            }
+        }
+        a {
+            line-height: 1;
+            font-size: 11px;
+            color: #fff;
+            color: rgba(#fff, 0.8);
+            display: block;
+            text-align: center;
+            text-shadow: rgba(#000, 0.4) 0 -1px 0;
+            strong {
+                font-size: 14px;
+                display: block;
+                color: #fff;
+                -webkit-font-smoothing: antialiased;
+            }
         }
     }
+}
+
+section {
+    clear: both;
 }
