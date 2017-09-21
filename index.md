@@ -2,6 +2,8 @@
 layout: default
 ---
 
+> Talk is cheap, show me the code.
+
 # Self-Introduction
 
 * Born in the year 1984.
@@ -11,7 +13,7 @@ layout: default
 * Fast learning and good teamwork as well as communications.
 * To be continued.
 
-## Personal Skills
+# Personal Skills
 
 * ASP.net MVC, C#, WCF
 * MS SQLServer, Oracle, MongoDB
