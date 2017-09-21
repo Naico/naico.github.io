@@ -3,7 +3,7 @@ layout: default
 ---
 # Article List
 
-<ul class="blog-list">
+<ul>
   {% for post in site.posts %}
     <li>
       <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>

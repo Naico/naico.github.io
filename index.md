@@ -2,8 +2,6 @@
 layout: default
 ---
 
-> Talk is cheap, show me the code.
-
 # Self-Introduction
 
 * Born in the year 1984.
