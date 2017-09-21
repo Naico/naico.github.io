@@ -1,6 +1,14 @@
 ---
 layout: default
+title: Homepage
 ---
+## Welcome to Naico's Homepage
+
+```
+Talk is cheap, show me the code.
+                                _- Linus Torvalds_
+```
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
