@@ -1,5 +1,12 @@
 theme: jekyll-theme-modernist
 title: Naico Wang
 Description: My Profile
-permalink: /blog/:title.html
+
 timezone: Asia/ShangHai
+
+permalink: pretty
+
+collections:
+  posts:
+    output: true
+
