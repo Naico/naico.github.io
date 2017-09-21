@@ -16,7 +16,7 @@ p.photo-wrap, img.my-photo{
 }
 
 nav {
-    margin: 0 auto;
+    margin: 0;
     background: #5198DF;
     background: linear_gradient(#77B9FB, #3782CD);
     ul {
@@ -24,9 +24,10 @@ nav {
         padding: 0;
         list-style: none;
         li {
-            padding: 8px 35px;
+            width: 80px;
             float: left;
-            border-right: 1px solid #B2D2E1;
+            height: 30px;
+            line-height: 30px;
         }
         a {
             color: #fff;
