@@ -10,7 +10,7 @@ title: Resume for Naico
 * Gender: Male
 * Birth: 1984-12-20
 * CellPhone: +86-21-18521567361
-* Mail: wanghy1984@msn.cn
+* Mail: <wanghy1984@msn.cn>
 * Website: <www.naico.wang>
 
 ## Self Introduction
