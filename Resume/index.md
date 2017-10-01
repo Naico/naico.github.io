@@ -1,6 +1,8 @@
 ---
 layout: default
+title: Resume for Naico
 ---
+# CV for Naico
 
 ## Basic Information
 
@@ -23,14 +25,20 @@ layout: default
 
 ## Professional Tech Skill Metrix
 
-| Tech stack             | Level         | Notes                |
-|:-----------------------|:--------------|:---------------------|
-| `ASP.Net WebForm`      | Proficient    | N/A                  |
-| `ASP.Net MVC`          | Good          | MVC4/MVC5            |
-| `HTML/CSS`             | Proficient    | HTML5/CSS3           |
-| `Javascript`           | Proficient    | jQuery/Vue.js/Nodejs |
-| `MS SQL Server`        | Proficient    | N/A                  |
-| `Oracle`               | Good          | N/A                  |
-| `MongoDB`              | Familiar      | N/A                  |
+| Tech stack             | Level         | Notes                    |
+|:-----------------------|:--------------|:-------------------------|
+| **ASP.Net WebForm**    | Proficient    | N/A                      |
+| **ASP.Net MVC**        | Good          | **MVC4/MVC5**            |
+| **HTML/CSS**           | Proficient    | **HTML5/CSS3**           |
+| **Javascript**         | Proficient    | **jQuery/Vue.js/Nodejs** |
+| **MS SQL Server**      | Proficient    | N/A                      |
+| **Oracle**             | Good          | N/A                      |
+| **MongoDB**            | Familiar      | N/A                      |
 
 ## Work Experiences
+
+> 2012-09 -- Now
+>
+> Mercer China
+>
+> Software Development Engireer
