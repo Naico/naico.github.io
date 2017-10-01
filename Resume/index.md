@@ -6,27 +6,31 @@ layout: default
 
 * Name: Hongyu (Naico) Wang
 * Gender: Male
-* Birth: 1984/12/20
-* CellPhone: 18521567361
+* Birth: 1984-12-20
+* CellPhone: +86-21-18521567361
 * Mail: wanghy1984@msn.cn
+* Website: http://naico.wang
 
 ## Self Introduction
 
-* Responsible/Aggressive/Passion/Sprit
+* **A Front-End Engineer with backend skills**
+* _Responsible_/_Aggressive_/_Passion_/_Sprit_
+* Have strong interest in the software indurstry
+* Good communication skills and team work
 * Abroad working experience in USA (MS Redmond Headquarter)
-* Solid system development tech skills (MS tech stack, Web UI/JS framework design/XML/XSLT/InfoPath Form)
-* Rich experience in project plan/team management/team work
+* Solid system development tech skills
+* Rich experience in _project plan_/_team management_
 
 ## Professional Tech Skill Metrix
 
+| Tech stack             | Level         | Notes                |
+|:-----------------------|:--------------|:---------------------|
+| `ASP.Net WebForm`      | Proficient    | N/A                  |
+| `ASP.Net MVC`          | Good          | MVC4/MVC5            |
+| `HTML/CSS`             | Proficient    | HTML5/CSS3           |
+| `Javascript`           | Proficient    | jQuery/Vue.js/Nodejs |
+| `MS SQL Server`        | Proficient    | N/A                  |
+| `Oracle`               | Good          | N/A                  |
+| `MongoDB`              | Familiar      | N/A                  |
 
-| Tech stack             | Level   | Notes              |
-|:-----------------------|:--------|:-------------------|
-| `ASP.Net WebForm`      | good    | N/A                |
-| `ASP.Net MVC`          | good    | N/A                |
-| `HTML/CSS`             | good    | N/A                |
-| `Javascript`           | good    | N/A                |
-| `MS SQL Server`        | good    | N/A                |
-| `Oracle`               | good    | N/A                |
-| `MongoDB`              | good    | N/A                |
-
+## Work Experiences
