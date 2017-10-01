@@ -2,9 +2,7 @@
 layout: default
 title: Resume for Naico
 ---
-# CV for Naico
-
-## Basic Information
+# Basic Information
 
 * Name: Hongyu (Naico) Wang
 * Gender: Male
@@ -13,7 +11,7 @@ title: Resume for Naico
 * Mail: <wanghy1984@msn.cn>
 * Website: <www.naico.wang>
 
-## Self Introduction
+# Self Introduction
 
 * **A Front-End Engineer with backend skills**
 * _Responsible_/_Aggressive_/_Passion_/_Sprit_
@@ -23,7 +21,7 @@ title: Resume for Naico
 * Solid system development tech skills
 * Rich experience in _project plan_/_team management_
 
-## Professional Tech Skill Metrix
+# Professional Tech Skill Metrix
 
 | Tech stack             | Level         | Notes                    |
 |:-----------------------|:--------------|:-------------------------|
@@ -35,7 +33,7 @@ title: Resume for Naico
 | **Oracle**             | Good          | N/A                      |
 | **MongoDB**            | Familiar      | N/A                      |
 
-## Work Experiences
+# Work Experiences
 
 > 2012-09 -- Now
 >
