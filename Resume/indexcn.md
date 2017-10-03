@@ -1,11 +1,11 @@
 ---
-layout: default
-title: Resume for Naico(EN)
+layout: defaultcn
+title: Resume for Naico(CN)
 ---
-# Basic Information
+# 个人信息
 
-* Name: Hongyu (Naico) Wang
-* Gender: Male
+* 姓名: 王宏宇
+* 性别: 男
 * Birth: 1984-12-20
 * CellPhone: +86-21-18521567361
 * Mail: <wanghy1984@msn.cn>
