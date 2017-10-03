@@ -95,23 +95,75 @@ title: Resume for Naico
 
 ## Project Experiences
 
-``` 
-### 2012/10 - Now  @ Mercer China
+> ### 2017/05 - Now  @ Mercer China
+>
+> #### Mercer Gold Plus
+>
+> Work with local and offshore team for the MG+ project, take responsibility for designing, coding, code review, etc.
+>
+> The application is build with ASP.NET MVC + Oracle database, the front-end is using jQuery framework and some of the jQuery based plugin.
 
- #### Mercer Gold Plus
+> ### 2015/05 - 2017/05 @ Mercer China
+>
+> #### Mercer RMS Application
+>
+> Maintain an old internal web application and upgrade the project from .NET 2.0 to .Net 4.5. The key work content is the framework upgrading and bug fix for this application. Mainly take part in the designing, coding work.
+>
+> This application is build with ASP.NET WebForm using VB.NET + Oracle database.
 
- Work with local and offshore team for the MG+ project, take responsibility for designing, coding, code review, etc.
+> ### 2013/12 - 2015/05 @ Mercer China
+>
+> ### Mercer Metrix Application
+>
+> Take over the work from US developers and continue with the coding work for this application. Working with offshore PM and QA to make sure the application is delivered with high quality.
+>
+> This application is based on the ASP.NET WebForm + MSSQLServer. The front-end is using the native javascript without any frameworks.
 
- The application
-```
-
-
+> ### 2012/10 - 2013/12 @ Mercer China
+>
+> #### Benefit Asia II
+> 
+> Work with PM/BA/QA to accomplished the project goals. This system is widely used by the users around asia-pacific, it is used for the company to design the employee benefits.
+>
+> The system is design based on ASP.NET and using the DotNetNuke CMS framewok, and using the jQuery as the front-end display framework.
 
 > ### 2009/07 - 2012/10 @ ChinaSoft
 >
-> #### Software Development Engineer
+> #### MSN Homepage Release
+>
+> Get involved in the project delivery from DEV side. Take charge of the architecture design and make decision for the final solution of every project. Directly report to my FTE manager with the project process and the status of each project. Directly communicate with the FTE DEV to make our team keep pace of US team. Take part in the daily code review, which is sent from our members.
+>
+> Worked in Microsoft US Seattle headquarters, directly coordinated with the Microsoft DEVs during 2011/02 – 2011/05.
+>
+> Since 2009, I attended / leaded a series of MSN Homepage outsourcing project developing, including but not limiting in the following projects:
+>
+> * xin.msn.com Singapore MSN.com V14 Releasing
+>
+> * latino.msn.com. US local market Latin language version V14 Releasing
+>
+> * ca.msn.com, Canada MSN.com V14 Releasing
+>
+> * fr.msn.com, France MSN.com V14 Releasing
+>
+> * de.msn.com, Germany MSN.com V14 Releasing
+>
+> * it.msn.com, Italy MSN.com V14 Releasing
+>
+> * hk.msn.com, Hong Kong MSN.com V14 Releasing
+>
+> * jp.msn.com, Japan MSN.com V14 Releasing
+>
+> * tw.msn.com, Taiwan MSN.com V14 Releasing
+>
+> * es.msn.com Spain MSN.com V14 Releasing
+>
+> * MSN homepage performance optimization for IT/ES/FR/CA/BR
 
 
 > ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
 >
-> #### Web Development Engineer
+> #### Portal Site XPChina.com
+>
+> We upgrade the website from .net 2.0 to .net 3.5 platform and the entire front end UI is completely changed. I mainly took part in the UI re-design and the code logic update as well as the actually coding work.
+>
+> We use MVC mode to re-architect the website to get higher performance and update the UI to get better user experience. I used Photoshop to get every image which is used in the website and took part in the code update for logic layer and UI layer.
