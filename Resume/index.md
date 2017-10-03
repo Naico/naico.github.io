@@ -51,11 +51,38 @@ title: Resume for Naico
 > * _HTML / Javascript(jQuery) / CSS_
 > * _MSSQL Server / Oracle_
 
-> ### 2009/06 - 2012/10 @ ChinaSoft
+> ### 2009/07 - 2012/10 @ ChinaSoft
 >
 > #### Software DEvelopment Engineer
 >
 > ##### Responsibility
 >
 > * Work for Microsoft MSNHomepage Project as a Front-End Engineer
-> * 
+> * Build and Release new version homepage for MSN global markets, such as US, UK, SG, etc.
+> * Communicate with Microsoft FTE and local Test/PM Team
+> * Code Review and DEV Team Status Report
+> * Work onshore to Seattle for 6 months.
+>
+> ##### Techinal Skills
+> * _ASP.NET using C#_
+> * _Javascript(native) and MSN Mini-Framework_
+> * _HTML and CSS_
+> * _XML and XSLT/XPATH_
+> * _Silverlight_
+
+> ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
+>
+> #### Web Development Engineer
+>
+> ##### Responsibility
+>
+> * Developping Work for the portal website [link]<XPChina.com>.
+> * Database design and development.
+> * Front-end page development and performance optimize.
+>
+> ##### Techinal Skills
+>
+> * _ASP.NET WebForm using C#_
+> * _HTML/CSS/Javascript_
+> * _MSSQL Server_
+> * _Flash_
