@@ -44,20 +44,6 @@ title: Resume for Naico
 > ### 2012/10 - Present  @ Mercer China
 >
 > #### Software Development Engineer
-
-> ### 2009/07 - 2012/10 @ ChinaSoft
->
-> #### Software DEvelopment Engineer
-
-> ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
->
-> #### Web Development Engineer
-
-## Project Experiences
-
-> ### 2012/10 - Now  @ Mercer China
->
-> #### Software Development Engineer
 >
 > ##### Responsibility
 >
@@ -73,7 +59,7 @@ title: Resume for Naico
 
 > ### 2009/07 - 2012/10 @ ChinaSoft
 >
-> #### Software DEvelopment Engineer
+> #### Software Development Engineer
 >
 > ##### Responsibility
 >
@@ -96,7 +82,7 @@ title: Resume for Naico
 >
 > ##### Responsibility
 >
-> * Developping Work for the portal website [link]<XPChina.com>.
+> * Developping Work for the portal website XPChina.com.
 > * Database design and development.
 > * Front-end page development and performance optimize.
 >
@@ -106,3 +92,26 @@ title: Resume for Naico
 > * _HTML/CSS/Javascript_
 > * _MSSQL Server_
 > * _Flash_
+
+## Project Experiences
+
+``` 
+### 2012/10 - Now  @ Mercer China
+
+ #### Mercer Gold Plus
+
+ Work with local and offshore team for the MG+ project, take responsibility for designing, coding, code review, etc.
+
+ The application
+```
+
+
+
+> ### 2009/07 - 2012/10 @ ChinaSoft
+>
+> #### Software Development Engineer
+
+
+> ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
+>
+> #### Web Development Engineer
