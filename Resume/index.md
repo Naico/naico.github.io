@@ -43,7 +43,7 @@ title: Resume for Naico(EN)
 
 > ### 2012/10 - Present  @ Mercer China
 >
-> #### Software Development Engineer
+> #### Senior Software Development Engineer
 >
 > ##### Responsibility
 >
@@ -59,7 +59,7 @@ title: Resume for Naico(EN)
 
 > ### 2009/07 - 2012/10 @ ChinaSoft
 >
-> #### Software Development Engineer
+> #### Senior Software Development Engineer
 >
 > ##### Responsibility
 >

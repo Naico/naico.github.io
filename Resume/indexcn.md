@@ -1,27 +1,27 @@
 ---
 layout: defaultcn
-title: Resume for Naico(CN)
+title: 个人简历 - 王宏宇(Naico)
 ---
 # 个人信息
 
 * 姓名: 王宏宇
 * 性别: 男
-* Birth: 1984-12-20
-* CellPhone: +86-21-18521567361
-* Mail: <wanghy1984@msn.cn>
-* Website: <http://naico.wang/>
+* 出生年月: 1984-12-20
+* 联系电话: +86-21-18521567361
+* 电子邮箱: <wanghy1984@msn.cn>
+* W个人网站: <http://naico.wang/>
 
-## Self Introduction
+## 个人简介
 
-* **A Front-End Engineer with backend skills**
-* _Responsible_/_Aggressive_/_Passion_/_Sprit_
-* Have strong interest in the software indurstry
-* Good communication skills and team work
-* Abroad working experience in USA (MS Redmond Headquarter)
-* Solid system development tech skills
-* Rich experience in _project plan_/_team management_
+* **一个懂点后端开发的前端开发工程师**
+* _责任/主动/激情/信念_
+* 一个对软件开发行业有浓厚兴趣的码农
+* 良好的沟通技巧和团队工作信念
+* 微软总部的海外工作经历
+* 扎实的软件系统开发经验
+* 在_项目规划_和_团队管理_方面有丰富经验
 
-## Professional Tech Skill Metrix
+## 职业技能矩阵
 
 | Tech stack             | Level         | Notes                    |
 |:-----------------------|:--------------|:-------------------------|
@@ -33,109 +33,106 @@ title: Resume for Naico(CN)
 | **Oracle**             | Good          | N/A                      |
 | **MongoDB**            | Familiar      | N/A                      |
 
-## Education
+## 教育背景
 
-> 2003 - 2007 @ Taishan Medical University
+> 2003 - 2007 @ 泰山医学院
 >
-> Bachelor in Information Management and Information Systems
+> 信息管理与信息系统专业 - 学士学位
 
-## Career Summary
+## 职业经历
 
-> ### 2012/10 - Present  @ Mercer China
+> ### 2012/10 - 至今  @ 美世咨询(中国)有限公司
 >
-> #### Software Development Engineer
+> #### 高级软件开发工程师
 >
-> ##### Responsibility
+> ##### 岗位职责
 >
-> * Work for Mercer Global IT Team. Provide support for the Mercer internal/external projects all over the world.
-> * Designing, coding for the existing projects and the new coming projects.
-> * Communicating with the onshore/offshore team members.
+> * 隶属于美世咨询Global IT团队，为美世全球的内部和外部项目提供全方位的支持
+> * 为已有的和新到来的项目进行编码设计、程序编写工作
+> * 与位于全球的项目团队沟通协作
 >
-> ##### Techincal Skills
+> ##### 技术需求
 >
 > * _ASP.NET WebForms / MVC using C# / VB.NET_
 > * _HTML / Javascript(jQuery) / CSS_
 > * _MSSQL Server / Oracle_
 
-> ### 2009/07 - 2012/10 @ ChinaSoft
+> ### 2009/07 - 2012/10 @ 上海中软资源技术服务有限公司
 >
-> #### Software Development Engineer
+> #### 高级软件开发工程师
 >
-> ##### Responsibility
+> ##### 岗位职责
 >
-> * Work for Microsoft MSNHomepage Project as a Front-End Engineer
-> * Build and Release new version homepage for MSN global markets, such as US, UK, SG, etc.
-> * Communicate with Microsoft FTE and local Test/PM Team
-> * Code Review and DEV Team Status Report
-> * Work onshore to Seattle for 6 months.
+> * 参与MSN Homepage的前端开发工作
+> * 参与全球的MSN首页开发工作
+> * 与微软FTE和本地的PM、Tester团队协同工作
+> * 代码review和团队状态报告
 >
-> ##### Techinal Skills
+> ##### 技术需求
 > * _ASP.NET using C#_
 > * _Javascript(native) and MSN Mini-Framework_
 > * _HTML and CSS_
 > * _XML and XSLT/XPATH_
 > * _Silverlight_
 
-> ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
+> ### 2007/07 - 2009/07 @ 谷粒软件(上海)有限公司
 >
 > #### Web Development Engineer
 >
-> ##### Responsibility
+> ##### 岗位职责
 >
-> * Developping Work for the portal website XPChina.com.
-> * Database design and development.
-> * Front-end page development and performance optimize.
+> * 参与公司门户网站地产中华网的开发
+> * 数据库的设计与开发工作
+> * 前端页面的编写与性能优化工作
 >
-> ##### Techinal Skills
+> ##### 技术需求
 >
 > * _ASP.NET WebForm using C#_
 > * _HTML/CSS/Javascript_
 > * _MSSQL Server_
 > * _Flash_
 
-## Project Experiences
+## 项目经验
 
-> ### 2017/05 - Now  @ Mercer China
+> ### 2017/05 - 至今  @ 美世咨询(中国)有限公司
 >
 > #### Mercer Gold Plus
 >
-> Work with local and offshore team for the MG+ project, take responsibility for designing, coding, code review, etc.
+> 与本地和美国的项目团队协同工作，参与MG+项目的设计，开发以及代码Review工作
 >
-> The application is build with ASP.NET MVC + Oracle database, the front-end is using jQuery framework and some of the jQuery based plugin.
+> 此项目是基于 ASP.NET MVC + Oracle 数据库, 前端应用jQuery相关的框架实现
 
-> ### 2015/05 - 2017/05 @ Mercer China
+> ### 2015/05 - 2017/05 @ 美世咨询(中国)有限公司
 >
 > #### Mercer RMS Application
 >
-> Maintain an old internal web application and upgrade the project from .NET 2.0 to .Net 4.5. The key work content is the framework upgrading and bug fix for this application. Mainly take part in the designing, coding work.
+> 维护美世内部的Metrix应用程序。将Framework从2.0升级到4.5，主要的工作内容是.NET框架升级和bug修补工作
 >
-> This application is build with ASP.NET WebForm using VB.NET + Oracle database.
+> 此项目是基于 ASP.NET WebForm (VB.NET) + Oracle 数据库
 
-> ### 2013/12 - 2015/05 @ Mercer China
+> ### 2013/12 - 2015/05 @ 美世咨询(中国)有限公司
 >
 > ### Mercer Metrix Application
 >
-> Take over the work from US developers and continue with the coding work for this application. Working with offshore PM and QA to make sure the application is delivered with high quality.
+> 接手Metrix项目，与本地的QA团队通力合作，完成项目的目标，确保项目高效高质量的发布
 >
-> This application is based on the ASP.NET WebForm + MSSQLServer. The front-end is using the native javascript without any frameworks.
+> 此项目是基于 ASP.NET WebForm + MSSQLServer. 前端是基于原生的Javascript，没有任何JS框架的介入
 
-> ### 2012/10 - 2013/12 @ Mercer China
+> ### 2012/10 - 2013/12 @ 美世咨询(中国)有限公司
 >
 > #### Benefit Asia II
 > 
-> Work with PM/BA/QA to accomplished the project goals. This system is widely used by the users around asia-pacific, it is used for the company to design the employee benefits.
+> 与本地的PM/QA/BA团队合作完成BA2项目的开发工作
 >
-> The system is design based on ASP.NET and using the DotNetNuke CMS framewok, and using the jQuery as the front-end display framework.
+> 此项目是基于 ASP.NET 并使用 DotNetNuke CMS framewok, 前端使用 jQuery 框架.
 
-> ### 2009/07 - 2012/10 @ ChinaSoft
+> ### 2009/07 - 2012/10 @ 上海中软资源技术服务有限公司
 >
 > #### MSN Homepage Release
 >
-> Get involved in the project delivery from DEV side. Take charge of the architecture design and make decision for the final solution of every project. Directly report to my FTE manager with the project process and the status of each project. Directly communicate with the FTE DEV to make our team keep pace of US team. Take part in the daily code review, which is sent from our members.
+> 作为一个SDE，直接参与了所有homepage的项目开发。主要负责前端架构以及项目解决方案的设计工作。汇报对象为Microsoft的SDE Lead。
 >
-> Worked in Microsoft US Seattle headquarters, directly coordinated with the Microsoft DEVs during 2011/02 – 2011/05.
->
-> Since 2009, I attended / leaded a series of MSN Homepage outsourcing project developing, including but not limiting in the following projects:
+> 直接参与并完成了以下项目的release工作
 >
 > * xin.msn.com Singapore MSN.com V14 Releasing
 >
@@ -160,10 +157,10 @@ title: Resume for Naico(CN)
 > * MSN homepage performance optimization for IT/ES/FR/CA/BR
 
 
-> ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
+> ### 2007/07 - 2009/07 @ 谷粒软件(上海)有限公司
 >
-> #### Portal Site XPChina.com
+> #### 门户网站地产中华网
 >
-> We upgrade the website from .net 2.0 to .net 3.5 platform and the entire front end UI is completely changed. I mainly took part in the UI re-design and the code logic update as well as the actually coding work.
+> 直接参与开发设计一个基于Web的地产发布平台，整合门店资源，进行网上地产开发系统的展示与设计。
 >
-> We use MVC mode to re-architect the website to get higher performance and update the UI to get better user experience. I used Photoshop to get every image which is used in the website and took part in the code update for logic layer and UI layer.
+> 使用ASP.NET MVC + jQuery重构整个网站，在这个过程中，全面参与架构和编码工作。
