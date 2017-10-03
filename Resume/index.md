@@ -33,7 +33,27 @@ title: Resume for Naico
 | **Oracle**             | Good          | N/A                      |
 | **MongoDB**            | Familiar      | N/A                      |
 
-## Work Experiences
+## Education
+
+> 2003 - 2007 @ Taishan Medical University
+>
+> Bachelor in Information Management and Information Systems
+
+## Career Summary
+
+> ### 2012/10 - Present  @ Mercer China
+>
+> #### Software Development Engineer
+
+> ### 2009/07 - 2012/10 @ ChinaSoft
+>
+> #### Software DEvelopment Engineer
+
+> ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
+>
+> #### Web Development Engineer
+
+## Project Experiences
 
 > ### 2012/10 - Now  @ Mercer China
 >
