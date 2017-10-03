@@ -35,18 +35,27 @@ title: Resume for Naico
 
 ## Work Experiences
 
-### 2012-09 - Now  @ Mercer China
+> ### 2012/10 - Now  @ Mercer China
+>
+> #### Software Development Engineer
+>
+> ##### Responsibility
+>
+> * Work for Mercer Global IT Team. Provide support for the Mercer internal/external projects all over the world.
+> * Designing, coding for the existing projects and the new coming projects.
+> * Communicating with the onshore/offshore team members.
+>
+> ##### Techincal Skills
+>
+> * _ASP.NET WebForms / MVC using C# / VB.NET_
+> * _HTML / Javascript(jQuery) / CSS_
+> * _MSSQL Server / Oracle_
 
-#### Software Development Engireer
-
-##### Responsibility
-
-* Work for Mercer Global IT Team. Provide support for the Mercer internal/external projects all over the world.
-* Designing, coding for the existing projects and the new coming projects.
-* Communicating with the onshore/offshore team members.
-
-##### Techincal Skills
-
-* _ASP.NET WebForms / MVC using C# / VB.NET_
-* _HTML / Javascript(jQuery) / CSS_
-* _MSSQL Server / Oracle_
+> ### 2009/06 - 2012/10 @ ChinaSoft
+>
+> #### Software DEvelopment Engineer
+>
+> ##### Responsibility
+>
+> * Work for Microsoft MSNHomepage Project as a Front-End Engineer
+> * 
