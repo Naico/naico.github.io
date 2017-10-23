@@ -13,7 +13,7 @@ title: 个人简历 - 王宏宇(Naico)
 
 ## 个人简介
 
-* **一个懂点后端开发的前端开发工程师**
+* **一个懂点前后端开发的项目经理**
 * _责任/主动/激情/信念_
 * 一个对软件开发行业有浓厚兴趣的码农
 * 良好的沟通技巧和团队工作信念
@@ -25,6 +25,7 @@ title: 个人简历 - 王宏宇(Naico)
 
 | Tech stack             | Level         | Notes                    |
 |:-----------------------|:--------------|:-------------------------|
+| **Project Management** | Proficient    | PMP Certified            |
 | **ASP.Net WebForm**    | Proficient    | N/A                      |
 | **ASP.Net MVC**        | Good          | **MVC4/MVC5**            |
 | **HTML/CSS**           | Proficient    | **HTML5/CSS3**           |
@@ -39,27 +40,34 @@ title: 个人简历 - 王宏宇(Naico)
 >
 > 信息管理与信息系统专业 - 学士学位
 
+> 2017-09 @ 上海
+>
+> PMP认证
+
 ## 职业经历
 
 > ### 2012/10 - 至今  @ 美世咨询(中国)有限公司
 >
-> #### 高级软件开发工程师
+> #### 高级软件开发工程师、项目Owner
 >
 > ##### 岗位职责
 >
 > * 隶属于美世咨询Global IT团队，为美世全球的内部和外部项目提供全方位的支持
 > * 为已有的和新到来的项目进行编码设计、程序编写工作
 > * 与位于全球的项目团队沟通协作
+> * 确保项目按时高效的发布上线
+
 >
 > ##### 技术需求
 >
 > * _ASP.NET WebForms / MVC using C# / VB.NET_
 > * _HTML / Javascript(jQuery) / CSS_
 > * _MSSQL Server / Oracle_
+> * _Project Management_
 
 > ### 2009/07 - 2012/10 @ 上海中软资源技术服务有限公司
 >
-> #### 高级软件开发工程师
+> #### 高级软件开发工程师、开发经理
 >
 > ##### 岗位职责
 >
@@ -74,6 +82,7 @@ title: 个人简历 - 王宏宇(Naico)
 > * _HTML and CSS_
 > * _XML and XSLT/XPATH_
 > * _Silverlight_
+> * _Project Management_
 
 > ### 2007/07 - 2009/07 @ 谷粒软件(上海)有限公司
 >

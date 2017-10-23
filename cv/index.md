@@ -13,7 +13,7 @@ title: Resume for Naico(EN)
 
 ## Self Introduction
 
-* **A Front-End Engineer with backend skills**
+* **A Team Manager with front-end and backend skills**
 * _Responsible_/_Aggressive_/_Passion_/_Sprit_
 * Have strong interest in the software indurstry
 * Good communication skills and team work
@@ -25,6 +25,7 @@ title: Resume for Naico(EN)
 
 | Tech stack             | Level         | Notes                    |
 |:-----------------------|:--------------|:-------------------------|
+| **Project Management** | Proficient    | PMP Certified            |
 | **ASP.Net WebForm**    | Proficient    | N/A                      |
 | **ASP.Net MVC**        | Good          | **MVC4/MVC5**            |
 | **HTML/CSS**           | Proficient    | **HTML5/CSS3**           |
@@ -39,27 +40,33 @@ title: Resume for Naico(EN)
 >
 > Bachelor in Information Management and Information Systems
 
+> 2017-09 @ Shanghai 
+>
+> PMP Certified
+
 ## Career Summary
 
 > ### 2012/10 - Present  @ Mercer China
 >
-> #### Senior Software Development Engineer
+> #### Senior Software Development Engineer & Project Owner
 >
 > ##### Responsibility
 >
 > * Work for Mercer Global IT Team. Provide support for the Mercer internal/external projects all over the world.
 > * Designing, coding for the existing projects and the new coming projects.
 > * Communicating with the onshore/offshore team members.
+> * Make sure the project released as scheduled with high efficiency.
 >
 > ##### Techincal Skills
 >
 > * _ASP.NET WebForms / MVC using C# / VB.NET_
 > * _HTML / Javascript(jQuery) / CSS_
 > * _MSSQL Server / Oracle_
+> * _Project Management_
 
 > ### 2009/07 - 2012/10 @ ChinaSoft
 >
-> #### Senior Software Development Engineer
+> #### Senior Software Development Engineer & DEV Lead
 >
 > ##### Responsibility
 >
@@ -75,6 +82,7 @@ title: Resume for Naico(EN)
 > * _HTML and CSS_
 > * _XML and XSLT/XPATH_
 > * _Silverlight_
+> * _Project Management_
 
 > ### 2007/07 - 2009/07 @ Grain Tech (Shanghai)
 >
