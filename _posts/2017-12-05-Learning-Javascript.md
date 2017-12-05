@@ -6,7 +6,7 @@ title: Step Into Javascript Language
 <header>
 <h1>Javascript语言精粹</h1>
 </header>
-<section>
+
 
 # 从闭包开始
 
@@ -16,4 +16,3 @@ title: Step Into Javascript Language
 
 这是MDN官方给出的闭包的定义。比较晦涩难懂。我个人理解为
 
-</section>
