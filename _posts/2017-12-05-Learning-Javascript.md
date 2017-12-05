@@ -1,3 +1,8 @@
+---
+layout: blog
+title: Step Into Javascript Language 
+---
+
 # 从闭包开始
 
 ## 闭包的定义
