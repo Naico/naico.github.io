@@ -3,6 +3,10 @@ layout: blog
 title: Step Into Javascript Language 
 ---
 
+<div>test div
+<input type="text" />
+</div>
+
 # 从闭包开始
 
 ## 闭包的定义
