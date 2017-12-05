@@ -3,11 +3,6 @@ layout: blog
 title: Step Into Javascript Language 
 ---
 
-<header>
-<h1>Javascript语言精粹</h1>
-</header>
-
-
 # 从闭包开始
 
 ## 闭包的定义
