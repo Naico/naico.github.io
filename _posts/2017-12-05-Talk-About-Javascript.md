@@ -73,6 +73,8 @@ function greeting(name) {
     // 每次调用时，产生闭包，并返回内部函数对象给调用者
     return function() { alert(text); }
 }
-var sayHello=greeting("Closure");
-sayHello()  // 通过闭包访问到了局部变量text
+var sayHello = greeting("Closure");
+sayHello();  // 通过闭包访问到了局部变量text
 ```
+上述代码的执行结果是：Hello Closure，因为sayHello()函数在greeting函数执行完毕后，仍然可以访问到了定义在其之内的局部变量text。
+这个就是传说中闭包的效果，闭包在Javascript中有多种应用场景和模式，比如Singleton，Power Constructor等这些Javascript模式都离不开对闭包的使用。
