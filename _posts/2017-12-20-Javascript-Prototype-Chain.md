@@ -112,3 +112,6 @@ Person.prototype = {
 
 上面这句话有点拗口，我们「翻译」一下：A 有一个默认的 constructor 属性，这个属性是一个指针，指向 Person。即：
 > Person.prototype.constructor == Person
+
+在上面第二小节《构造函数》里，我们知道**实例的构造函数属性（constructor）指向构造函数** ：
+> person1.constructor == Person
