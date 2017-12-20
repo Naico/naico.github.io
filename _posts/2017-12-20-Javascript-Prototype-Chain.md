@@ -74,7 +74,7 @@ Person.prototype.job  = 'Software Engineer';
 Person.prototype.sayName = function() {
   alert(this.name);
 }
-  
+
 var person1 = new Person();
 person1.sayName(); // 'Zaxlct'
 
@@ -88,3 +88,27 @@ console.log(person1.sayname == person2.sayname); //true
 
 > 每个对象都有 __proto__ 属性，但只有函数对象才有 prototype 属性
 
+那什么是原型对象呢？
+我们把上面的例子改一改你就会明白了：
+
+```js
+Person.prototype = {
+   name:  'Zaxlct',
+   age: 28,
+   job: 'Software Engineer',
+   sayName: function() {
+     alert(this.name);
+   }
+}
+```
+
+原型对象，顾名思义，它就是一个普通对象。从现在开始你要牢牢记住原型对象就是 Person.prototype ，如果你还是害怕它，那就把它想想成一个字母 A：
+
+> var A = Person.prototype
+
+在上面我们给 A 添加了 四个属性：name、age、job、sayName。其实它还有一个默认的属性：**constructor**
+
+> 在默认情况下，所有的原型对象都会自动获得一个 constructor（构造函数）属性，这个属性（是一个指针）指向 prototype 属性所在的函数（Person）
+
+上面这句话有点拗口，我们「翻译」一下：A 有一个默认的 constructor 属性，这个属性是一个指针，指向 Person。即：
+> Person.prototype.constructor == Person
