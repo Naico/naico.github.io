@@ -104,14 +104,93 @@ Person.prototype = {
 
 原型对象，顾名思义，它就是一个普通对象。从现在开始你要牢牢记住原型对象就是 Person.prototype ，如果你还是害怕它，那就把它想想成一个字母 A：
 
-> var A = Person.prototype
+```js
+var A = Person.prototype
+```
 
 在上面我们给 A 添加了 四个属性：name、age、job、sayName。其实它还有一个默认的属性：**constructor**
 
 > 在默认情况下，所有的原型对象都会自动获得一个 constructor（构造函数）属性，这个属性（是一个指针）指向 prototype 属性所在的函数（Person）
 
 上面这句话有点拗口，我们「翻译」一下：A 有一个默认的 constructor 属性，这个属性是一个指针，指向 Person。即：
-> Person.prototype.constructor == Person
+
+```js
+Person.prototype.constructor == Person
+```
 
 在上面第二小节《构造函数》里，我们知道**实例的构造函数属性（constructor）指向构造函数** ：
-> person1.constructor == Person
+
+```js
+person1.constructor == Person
+```
+
+这两个「公式」好像有点联系:
+
+```js
+person1.constructor == Person
+Person.prototype.constructor == Person
+```
+
+person1 为什么有 constructor 属性？那是因为 person1 是 Person 的实例。
+那 Person.prototype 为什么有 constructor 属性？？同理， Person.prototype （你把它想象成 A） 也是Person 的实例。
+也就是在 Person 创建的时候，创建了一个它的实例对象并赋值给它的 prototype，基本过程如下：
+
+```js
+var A = new Person();
+Person.prototype = A;
+```
+
+所以我们得出一个结论：
+> 原型对象（Person.prototype）是 构造函数（Person）的一个实例。
+
+原型对象其实就是普通对象（但 Function.prototype 除外，它是函数对象，但它很特殊，他没有prototype属性（前面说道函数对象都有prototype属性））。看下面的例子：
+
+```js
+function Person(){};
+ console.log(Person.prototype) //Person{}
+ console.log(typeof Person.prototype) //Object
+ console.log(typeof Function.prototype) // Function，这个特殊
+ console.log(typeof Object.prototype) // Object
+ console.log(typeof Function.prototype.prototype) //undefined
+```
+
+Function.prototype 为什么是函数对象呢？
+
+```js
+var A = new Function ();
+Function.prototype = A;
+```
+
+上文提到凡是通过 new Function( ) 产生的对象都是函数对象。因为 A 是函数对象，所以Function.prototype 是函数对象。
+
+那原型对象是用来做什么的呢？主要作用是用于继承。举个例子：
+
+```js
+var Person = function(name){
+    this.name = name; // tip: 当函数执行时这个 this 指的是谁？
+};
+Person.prototype.getName = function(){
+    return this.name;  // tip: 当函数执行时这个 this 指的是谁？
+}
+var person1 = new person('Mick');
+person1.getName(); //Mick
+```
+
+小问题，上面两个 this 都指向谁？
+
+```js
+var person1 = new person('Mick');
+person1.name = 'Mick'; // 此时 person1 已经有 name 这个属性了
+person1.getName(); //Mick
+```
+
+故两次 this 在函数执行时都指向 person1。
+
+## __proto__
+
+JS 在创建对象（不论是普通对象还是函数对象）的时候，都有一个叫做__proto__ 的内置属性，用于指向创建它的构造函数的原型对象。
+对象 person1 有一个 __proto__属性，创建它的构造函数是 Person，构造函数的原型对象是 Person.prototype ，所以：
+person1.__proto__ == Person.prototype
+
+请看下图：
+![](/asserts/images/proto.jpeg)
