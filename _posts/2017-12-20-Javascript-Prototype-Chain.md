@@ -193,7 +193,7 @@ JS 在创建对象（不论是普通对象还是函数对象）的时候，都�
 person1.__proto__ == Person.prototype
 
 请看下图：
-![](/asserts/images/proto.jpeg)
+![](/assets/images/proto.jpeg)
 
 根据上面这个连接图，我们能得到：
 
