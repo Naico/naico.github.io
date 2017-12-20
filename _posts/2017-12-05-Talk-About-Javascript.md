@@ -77,4 +77,204 @@ var sayHello = greeting("Closure");
 sayHello();  // 通过闭包访问到了局部变量text
 ```
 上述代码的执行结果是：Hello Closure，因为sayHello()函数在greeting函数执行完毕后，仍然可以访问到了定义在其之内的局部变量text。
-这个就是传说中闭包的效果，闭包在Javascript中有多种应用场景和模式，比如Singleton，Power Constructor等这些Javascript模式都离不开对闭包的使用。
+这个就是传说中闭包的效果，闭包在Javascript中有多种应用场景和模式，比如Singleton模式就离不开对闭包的使用。
+
+ECMAScript闭包模型
+ECMAScript到底是如何实现闭包的呢？想深入了解的亲们可以获取ECMAScript 规范进行研究，我这里也只做一个简单的讲解，内容也是来自于网络。
+
+在ECMAscript的脚本的函数运行时，每个函数关联都有一个执行上下文场景(Execution Context) ，这个执行上下文场景中包含三个部分
+
+文法环境（The LexicalEnvironment）
+变量环境（The VariableEnvironment）
+this绑定
+其中第三点this绑定与闭包无关，不在本文中讨论。文法环境中用于解析函数执行过程使用到的变量标识符。我们可以将文法环境想象成一个对象，该对象包含了两个重要组件，环境记录(Enviroment Recode)，和外部引用(指针)。环境记录包含包含了函数内部声明的局部变量和参数变量，外部引用指向了外部函数对象的上下文执行场景。全局的上下文场景中此引用值为NULL。这样的数据结构就构成了一个单向的链表，每个引用都指向外层的上下文场景。
+
+例如上面我们例子的闭包模型应该是这样，sayHello函数在最下层，上层是函数greeting，最外层是全局场景。如下图：
+
+因此当sayHello被调用的时候，sayHello会通过上下文场景找到局部变量text的值，因此在屏幕的对话框中显示出”Hello Closure”
+变量环境(The VariableEnvironment)和文法环境的作用基本相似，具体的区别请参看ECMAScript的规范文档。
+
+闭包的样列
+前面的我大致了解了Javascript闭包是什么，闭包在Javascript是怎么实现的。下面我们通过针对一些例子来帮助大家更加深入的理解闭包，下面共有5个样例，例子来自于JavaScript Closures For Dummies(镜像)。
+例子1:闭包中局部变量是引用而非拷贝
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+function say667() {
+    // Local variable that ends up within closure
+    var num = 666;
+    var sayAlert = function() { alert(num); }
+    num++;
+    return sayAlert;
+}
+ 
+var sayAlert = say667();
+sayAlert()
+因此执行结果应该弹出的667而非666。
+
+例子2：多个函数绑定同一个闭包，因为他们定义在同一个函数内。
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+function setupSomeGlobals() {
+    // Local variable that ends up within closure
+    var num = 666;
+    // Store some references to functions as global variables
+    gAlertNumber = function() { alert(num); }
+    gIncreaseNumber = function() { num++; }
+    gSetNumber = function(x) { num = x; }
+}
+setupSomeGlobals(); // 为三个全局变量赋值
+gAlertNumber(); //666
+gIncreaseNumber();
+gAlertNumber(); // 667
+gSetNumber(12);//
+gAlertNumber();//12
+例子3：当在一个循环中赋值函数时，这些函数将绑定同样的闭包
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+function buildList(list) {
+    var result = [];
+    for (var i = 0; i < list.length; i++) {
+        var item = 'item' + list[i];
+        result.push( function() {alert(item + ' ' + list[i])} );
+    }
+    return result;
+}
+ 
+function testList() {
+    var fnlist = buildList([1,2,3]);
+    // using j only to help prevent confusion - could use i
+    for (var j = 0; j < fnlist.length; j++) {
+        fnlist[j]();
+    }
+}
+testList的执行结果是弹出item3 undefined窗口三次，因为这三个函数绑定了同一个闭包，而且item的值为最后计算的结果，但是当i跳出循环时i值为4，所以list[4]的结果为undefined.
+
+例子4：外部函数所有局部变量都在闭包内，即使这个变量声明在内部函数定义之后。
+
+1
+2
+3
+4
+5
+6
+7
+8
+function sayAlice() {
+    var sayAlert = function() { alert(alice); }
+    // Local variable that ends up within closure
+    var alice = 'Hello Alice';
+    return sayAlert;
+}
+var helloAlice=sayAlice();
+helloAlice();
+执行结果是弹出”Hello Alice”的窗口。即使局部变量声明在函数sayAlert之后，局部变量仍然可以被访问到。
+
+例子5：每次函数调用的时候创建一个新的闭包
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+function newClosure(someNum, someRef) {
+    // Local variables that end up within closure
+    var num = someNum;
+    var anArray = [1,2,3];
+    var ref = someRef;
+    return function(x) {
+        num += x;
+        anArray.push(num);
+        alert('num: ' + num +
+        '\nanArray ' + anArray.toString() +
+        '\nref.someVar ' + ref.someVar);
+    }
+}
+closure1=newClosure(40,{someVar:'closure 1'});
+closure2=newClosure(1000,{someVar:'closure 2'});
+ 
+closure1(5); // num:45 anArray[1,2,3,45] ref:'someVar closure1'
+closure2(-10);// num:990 anArray[1,2,3,990] ref:'someVar closure2'
+闭包的应用
+Singleton 单件：
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+var singleton = function () {
+    var privateVariable;
+    function privateFunction(x) {
+        ...privateVariable...
+    }
+ 
+    return {
+        firstMethod: function (a, b) {
+            ...privateVariable...
+        },
+        secondMethod: function (c) {
+            ...privateFunction()...
+        }
+    };
+}();
+这个单件通过闭包来实现。通过闭包完成了私有的成员和方法的封装。匿名主函数返回一个对象。对象包含了两个方法，方法1可以方法私有变量，方法2访问内部私有函数。需要注意的地方是匿名主函数结束的地方的'()’，如果没有这个'()’就不能产生单件。因为匿名函数只能返回了唯一的对象，而且不能被其他地方调用。这个就是利用闭包产生单件的方法。
