@@ -2,10 +2,11 @@
 layout: blog
 title: Talk About Javascript 
 ---
+Javascript中有几个非常重要的语言特性——对象、原型继承、闭包。
+其中闭包对于那些使用传统静态语言的程序员来说是一个新的语言特性。
+闭包是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。
 
-闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。
-
-# 闭包的定义
+## 闭包的定义
 
 > A closure is the combination of a function and the lexical environment within which that function was declared.
 
@@ -13,7 +14,11 @@ title: Talk About Javascript
 
 > 闭包是一个函数和声明该函数的词法环境的组合。从理论角度来说，所有函数都是闭包。
 
-这是[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)官方给出的闭包的定义。比较晦涩难懂。我个人理解为闭包就是能够读取其他函数内部变量的函数。
+这是[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)官方给出的闭包的定义。比较晦涩难懂。我个人理解为闭包有以下几个特点：
+* 闭包就是能够读取其他函数内部变量的函数。
+* 闭包就是函数的局部变量集合，只是这些局部变量在函数返回后会继续存在。
+* 闭包就是就是函数的“堆栈”在函数返回后并不释放，我们也可以理解为这些函数堆栈并不在栈上分配而是在堆上分配
+* 当在一个函数内定义另外一个函数就会产生闭包
 
 由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成"定义在一个函数内部的函数"。
 
@@ -21,7 +26,7 @@ title: Talk About Javascript
 
 如果要全面学习学好Javascript高级技巧以及熟练运用框架和理解框架，那么一定要学好闭包。说到闭包，那就不得不说另外一个很让人感兴趣的话题，就是**变量的作用域**。
 
-# 变量的作用域
+## 变量的作用域
 
 我们可以回忆一下，我们现在在用的语言，拿C#来举例。你在一个方法中定义了一个变量，那么你只能在这个方法的范围内访问这个变量。在这个方法之外是无法访问到这个变量的。这就是变量的作用域。在Javascript中也是一样，我们考虑以下的Javascript代码片段：
 ```js
@@ -32,3 +37,10 @@ function foo(){
 foo(); // 999
 ```
 
+```js
+function foo(){
+    var a = 999;
+}
+alert(a); // error
+```
+Javascript函数内部可以访问全局变量，而函数外部则无法访问函数内部的变量。
