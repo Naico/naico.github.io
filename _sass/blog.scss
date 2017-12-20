@@ -7,7 +7,7 @@ html {
 body {
     padding: 30px 0;
     margin: 0;
-    font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 14px/1.5 Lato, Consolas, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #555;
     font-weight: 300;
     background: inline-image('checker.png') fixed;
@@ -193,8 +193,9 @@ h6 {
 
 blockquote {
     margin: 0 -20px 20px;
-    padding: 15px 20px 1px 40px;
-    font-style: bold;
+    padding: 15px 20px 1px 40px;    
+    font-style: normal;
+    font-weight: bold;
     background: #ccc;
     background: rgba(#000, 0.06);
     color: #222;
