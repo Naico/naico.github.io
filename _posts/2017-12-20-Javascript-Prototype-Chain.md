@@ -194,3 +194,13 @@ person1.__proto__ == Person.prototype
 
 请看下图：
 ![](/asserts/images/proto.jpeg)
+
+根据上面这个连接图，我们能得到：
+
+```js
+Person.prototype.constructor == Person;
+person1.__proto__ == Person.prototype;
+person1.constructor == Person;
+```
+
+**不过，要明确的真正重要的一点就是，这个连接存在于实例（person1）与构造函数（Person）的原型对象（Person.prototype）之间，而不是存在于实例（person1）与构造函数（Person）之间。**
