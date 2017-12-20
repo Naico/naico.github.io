@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Talk About Javascript 
+title: Javascript Closure 
 ---
 Javascript中有几个非常重要的语言特性——对象、原型继承、闭包。
 其中闭包对于那些使用传统静态语言的程序员来说是一个新的语言特性。
