@@ -5,7 +5,7 @@ title: Talk About Javascript
 
 闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。
 
-* 闭包的定义
+# 闭包的定义
 
 > A closure is the combination of a function and the lexical environment within which that function was declared.
 
@@ -21,7 +21,7 @@ title: Talk About Javascript
 
 如果要全面学习学好Javascript高级技巧以及熟练运用框架和理解框架，那么一定要学好闭包。说到闭包，那就不得不说另外一个很让人感兴趣的话题，就是**变量的作用域**。
 
-* 变量的作用域
+# 变量的作用域
 
 我们可以回忆一下，我们现在在用的语言，拿C#来举例。你在一个方法中定义了一个变量，那么你只能在这个方法的范围内访问这个变量。在这个方法之外是无法访问到这个变量的。这就是变量的作用域。在Javascript中也是一样，我们考虑以下的Javascript代码片段：
 ```js
