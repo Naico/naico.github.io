@@ -63,3 +63,16 @@ var a = 2;
 明白了这个道理，我们再看上面两个例子，就明白为什么函数外部访问不了函数内部定义的变量了。
 
 > 这里有个引申的学习点，在这里我只是大体的介绍了什么是作用域，如果想深入学习，可以了解一些有关词法作用域/函数作用域/块作用域。
+
+## 闭包来袭
+
+我们通过代码来展示闭包究竟是怎么形成的。考虑如下的Javascript代码段：
+```js
+function greeting(name) {
+    var text = 'Hello ' + name; // local variable
+    // 每次调用时，产生闭包，并返回内部函数对象给调用者
+    return function() { alert(text); }
+}
+var sayHello=greeting("Closure");
+sayHello()  // 通过闭包访问到了局部变量text
+```
