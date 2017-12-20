@@ -101,20 +101,13 @@ ECMAScript到底是如何实现闭包的呢？想深入了解的亲们可以获�
 因此当sayHello被调用的时候，sayHello会通过上下文场景找到局部变量text的值，因此在屏幕的对话框中显示出”Hello Closure”
 变量环境(The VariableEnvironment)和文法环境的作用基本相似，具体的区别请参看ECMAScript的规范文档。
 
-闭包的样列
-前面的我大致了解了Javascript闭包是什么，闭包在Javascript是怎么实现的。下面我们通过针对一些例子来帮助大家更加深入的理解闭包，下面共有5个样例，例子来自于JavaScript Closures For Dummies(镜像)。
-例子1:闭包中局部变量是引用而非拷贝
+## 闭包的样列
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+前面的我大致了解了Javascript闭包是什么，闭包在Javascript是怎么实现的。下面我们通过针对一些例子来帮助大家更加深入的理解闭包，下面共有5个样例，例子来自于JavaScript Closures For Dummies(镜像)。
+
+### 例子1:闭包中局部变量是引用而非拷贝
+
+```js
 function say667() {
     // Local variable that ends up within closure
     var num = 666;
@@ -124,25 +117,14 @@ function say667() {
 }
  
 var sayAlert = say667();
-sayAlert()
+sayAlert();
+```
+
 因此执行结果应该弹出的667而非666。
 
-例子2：多个函数绑定同一个闭包，因为他们定义在同一个函数内。
+### 例子2：多个函数绑定同一个闭包，因为他们定义在同一个函数内。
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
+```js
 function setupSomeGlobals() {
     // Local variable that ends up within closure
     var num = 666;
@@ -157,24 +139,11 @@ gIncreaseNumber();
 gAlertNumber(); // 667
 gSetNumber(12);//
 gAlertNumber();//12
-例子3：当在一个循环中赋值函数时，这些函数将绑定同样的闭包
+```
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
+### 例子3：当在一个循环中赋值函数时，这些函数将绑定同样的闭包
+
+```js
 function buildList(list) {
     var result = [];
     for (var i = 0; i < list.length; i++) {
@@ -191,18 +160,13 @@ function testList() {
         fnlist[j]();
     }
 }
+```
+
 testList的执行结果是弹出item3 undefined窗口三次，因为这三个函数绑定了同一个闭包，而且item的值为最后计算的结果，但是当i跳出循环时i值为4，所以list[4]的结果为undefined.
 
-例子4：外部函数所有局部变量都在闭包内，即使这个变量声明在内部函数定义之后。
+### 例子4：外部函数所有局部变量都在闭包内，即使这个变量声明在内部函数定义之后。
 
-1
-2
-3
-4
-5
-6
-7
-8
+```js
 function sayAlice() {
     var sayAlert = function() { alert(alice); }
     // Local variable that ends up within closure
@@ -211,28 +175,13 @@ function sayAlice() {
 }
 var helloAlice=sayAlice();
 helloAlice();
-执行结果是弹出”Hello Alice”的窗口。即使局部变量声明在函数sayAlert之后，局部变量仍然可以被访问到。
+```
 
-例子5：每次函数调用的时候创建一个新的闭包
+执行结果是弹出"Hello Alice"的窗口。即使局部变量声明在函数sayAlert之后，局部变量仍然可以被访问到。
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
+### 例子5：每次函数调用的时候创建一个新的闭包
+
+```js
 function newClosure(someNum, someRef) {
     // Local variables that end up within closure
     var num = someNum;
@@ -246,29 +195,15 @@ function newClosure(someNum, someRef) {
         '\nref.someVar ' + ref.someVar);
     }
 }
-closure1=newClosure(40,{someVar:'closure 1'});
-closure2=newClosure(1000,{someVar:'closure 2'});
- 
+closure1 = newClosure(40,{someVar:'closure 1'});
+closure2 = newClosure(1000,{someVar:'closure 2'});
 closure1(5); // num:45 anArray[1,2,3,45] ref:'someVar closure1'
 closure2(-10);// num:990 anArray[1,2,3,990] ref:'someVar closure2'
-闭包的应用
-Singleton 单件：
+```
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
+### 闭包的应用 - Singleton 单例模式：
+
+```js
 var singleton = function () {
     var privateVariable;
     function privateFunction(x) {
@@ -284,4 +219,8 @@ var singleton = function () {
         }
     };
 }();
-这个单件通过闭包来实现。通过闭包完成了私有的成员和方法的封装。匿名主函数返回一个对象。对象包含了两个方法，方法1可以方法私有变量，方法2访问内部私有函数。需要注意的地方是匿名主函数结束的地方的'()’，如果没有这个'()’就不能产生单件。因为匿名函数只能返回了唯一的对象，而且不能被其他地方调用。这个就是利用闭包产生单件的方法。
+```
+
+这个单例模式通过闭包来实现。通过闭包完成了私有的成员和方法的封装。匿名主函数返回一个对象。
+对象包含了两个方法，方法1可以方法私有变量，方法2访问内部私有函数。
+需要注意的地方是匿名主函数结束的地方的'()’，如果没有这个'()’就不能产生单例。因为匿名函数只能返回了唯一的对象，而且不能被其他地方调用。这个就是利用闭包产生单例的方法。
