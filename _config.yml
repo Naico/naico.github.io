@@ -1,8 +1,8 @@
 theme: jekyll-theme-modernist
 title: Naico Wang
 title_cn: 王宏宇(Naico)
-description: SDE - PM - SH - China
-description_cn: 软件开发工程师、软件项目经理 - 上海 - 中国
+description: SDE - SH - China
+description_cn: 软件开发工程师 - 上海 - 中国
 timezone: Asia/ShangHai
 permalink: pretty
 collections:
