@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Javascript Closure &mdash; 一口奶</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2017/12/16/Javascript-Closure/">
+    <link rel="alternate" type="application/atom+xml" title="一口奶" href="http://localhost:4000/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="Javascript Closure">
+      
+    <meta name="keywords" content="Javascript">
+    <meta name="og:keywords" content="Javascript">
+      
+    <meta name="description" content="Javascript中有几个非常重要的语言特性——对象、原型继承、闭包。其中闭包对于那些使用传统静态语言的程序员来说是一个新的语言特性。闭包是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。">
+    <meta name="og:description" content="Javascript中有几个非常重要的语言特性——对象、原型继承、闭包。其中闭包对于那些使用传统静态语言的程序员来说是一个新的语言特性。闭包是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2017/12/16/Javascript-Closure/">
+    <meta property="og:site_name" content="一口奶">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2017-12-16">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="一口奶"><span class="octicon octicon-mark-github"></span> 一口奶</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://localhost:4000/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://localhost:4000/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://localhost:4000/wiki/" class=" site-header-nav-item" target="" title="维基">维基</a>
+                
+                <a href="http://localhost:4000/links/" class=" site-header-nav-item" target="" title="链接">链接</a>
+                
+                <a href="http://localhost:4000/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="Javascript Clos">
+  <div class="container">
+    <div class="columns">
+      <div class="column three-fourths">
+        <div class="collection-title">
+          <h1 class="collection-header">Javascript Closure</h1>
+          <div class="collection-info">
+            
+            <span class="meta-info">
+              <span class="octicon octicon-calendar"></span> 2017/12/16
+            </span>
+             
+            <span class="meta-info">
+              <span class="octicon octicon-file-directory"></span>
+              <a href="http://localhost:4000/categories/#Javascript" title="Javascript">Javascript</a>
+            </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+  <div class="columns">
+    <div class="column three-fourths">
+      <article class="article-content markdown-body">
+        <p>Javascript中有几个非常重要的语言特性——对象、原型继承、闭包。
+其中闭包对于那些使用传统静态语言的程序员来说是一个新的语言特性。
+闭包是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。</p>
+
+<h2 id="闭包的定义">闭包的定义</h2>
+
+<blockquote>
+  <p>A closure is the combination of a function and the lexical environment within which that function was declared.</p>
+</blockquote>
+
+<blockquote>
+  <p>Closures(闭包)是使用被作用域封闭的变量，函数，闭包等执行的一个函数的作用域。通常我们用和其相应的函数来指代这些作用域。(可以访问独立数据的函数)</p>
+</blockquote>
+
+<blockquote>
+  <p>闭包是一个函数和声明该函数的词法环境的组合。从理论角度来说，所有函数都是闭包。</p>
+</blockquote>
+
+<p>这是<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures">MDN</a>官方给出的闭包的定义。比较晦涩难懂。我个人理解为闭包有以下几个特点：</p>
+<ul>
+  <li>闭包就是能够读取其他函数内部变量的函数。</li>
+  <li>闭包就是函数的局部变量集合，只是这些局部变量在函数返回后会继续存在。</li>
+  <li>闭包就是就是函数的“堆栈”在函数返回后并不释放，我们也可以理解为这些函数堆栈并不在栈上分配而是在堆上分配</li>
+  <li>当在一个函数内定义另外一个函数就会产生闭包</li>
+</ul>
+
+<p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。</p>
+
+<p>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
+
+<p>如果要全面学习学好Javascript高级技巧以及熟练运用框架和理解框架，那么一定要学好闭包。说到闭包，那就不得不说另外一个很让人感兴趣的话题，就是<strong>变量的作用域</strong>。</p>
+
+<h2 id="变量的作用域">变量的作用域</h2>
+
+<p>我们可以回忆一下，我们现在在用的语言，拿C#来举例。你在一个方法中定义了一个变量，那么你只能在这个方法的范围内访问这个变量。在这个方法之外是无法访问到这个变量的。这就是变量的作用域。在Javascript中也是一样，我们考虑以下的Javascript代码片段：</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">999</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">();</span> <span class="c1">// 999</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">foo</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">999</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// error</span>
+</code></pre></div></div>
+<p>Javascript函数内部可以访问全局变量，而函数外部则无法访问函数内部的变量。
+那么我们有这样的场景，我需要从函数外部访问函数内部定义好的变量，应该怎么办？
+这时候，闭包就派上用场了。</p>
+
+<h3 id="作用域是什么">作用域是什么</h3>
+
+<p>要完全说清楚作用域，可能就要从Javascript引擎说起了。这里面包含了编译原理，以及引擎和作用域的交互。是个很复杂很大的话题。今天暂且不讨论这些。有兴趣的同学可以参见ECMAScript的<a href="https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">ECMA-262标准</a>以及<a href="http://www.v8project.org">Chrome V8 Engine</a>的具体实现。
+下面我们通过一个简单的赋值语句来大体介绍一下引擎和作用域是如何协同工作的。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>下面我们将这一句话分解开来看。其实这句话用我们熟悉的伪代码来表述就是：“为一个变量分配一份内存，并命名为a，然后将2这个值保存到a这个变量中”。那我们来看编译器是如何处理的：</p>
+
+<ol>
+  <li>遇到 var a，编译器会询问作用域，是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译。否则，它会要求作用域在当前的作用域集合中声明一个新的变量，并命名为 a。</li>
+  <li>然后编译器会为引擎生成运行时所需要的代码，这些代码会处理a = 2这个操作。引擎运行时会首先询问作用域，在当前的作用域集合中是否存在一个叫做a的变量。如果是，引擎就会使用这个变量，如果不是，那么引擎会继续查找该变量。</li>
+</ol>
+
+<p>明白了这个道理，我们再看上面两个例子，就明白为什么函数外部访问不了函数内部定义的变量了。</p>
+
+<blockquote>
+  <p>这里有个引申的学习点，在这里我只是大体的介绍了什么是作用域，如果想深入学习，可以了解一些有关词法作用域/函数作用域/块作用域。</p>
+</blockquote>
+
+<h2 id="闭包来袭">闭包来袭</h2>
+
+<p>我们通过代码来展示闭包究竟是怎么形成的。考虑如下的Javascript代码段：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">greeting</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s1">'Hello '</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span> <span class="c1">// local variable</span>
+    <span class="c1">// 每次调用时，产生闭包，并返回内部函数对象给调用者</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">sayHello</span> <span class="o">=</span> <span class="nx">greeting</span><span class="p">(</span><span class="s2">"Closure"</span><span class="p">);</span>
+<span class="nx">sayHello</span><span class="p">();</span>  <span class="c1">// 通过闭包访问到了局部变量text</span>
+</code></pre></div></div>
+
+<p>上述代码的执行结果是：Hello Closure，因为sayHello()函数在greeting函数执行完毕后，仍然可以访问到了定义在其之内的局部变量text。
+这个就是传说中闭包的效果，闭包在Javascript中有多种应用场景和模式，比如Singleton模式就离不开对闭包的使用。</p>
+
+<h3 id="ecmascript闭包模型">ECMAScript闭包模型</h3>
+
+<p>ECMAScript到底是如何实现闭包的呢？想深入了解的亲们可以获取ECMAScript规范进行研究，我这里也只做一个简单的讲解，内容主要是来自于网络。</p>
+
+<p>在ECMAscript的脚本的函数运行时，每个函数关联都有一个执行上下文场景(Execution Context) ，这个执行上下文场景中包含三个部分</p>
+
+<ol>
+  <li>文法环境（The LexicalEnvironment）</li>
+  <li>变量环境（The VariableEnvironment）</li>
+  <li>this绑定</li>
+</ol>
+
+<p>其中第三点this绑定与闭包无关，不在本文中讨论。
+文法环境中用于解析函数执行过程使用到的变量标识符。我们可以将文法环境想象成一个对象，该对象包含了两个重要组件，环境记录(Enviroment Recode)，和外部引用(指针)。环境记录包含包含了函数内部声明的局部变量和参数变量，外部引用指向了外部函数对象的上下文执行场景。全局的上下文场景中此引用值为NULL。这样的数据结构就构成了一个单向的链表，每个引用都指向外层的上下文场景。</p>
+
+<p>例如上面我们例子的闭包模型应该是这样，sayHello函数在最下层，上层是函数greeting，最外层是全局场景。如下图：
+<img src="/assets/images/closure.png" alt="" /></p>
+
+<p>因此当sayHello被调用的时候，sayHello会通过上下文场景找到局部变量text的值，因此在屏幕的对话框中显示出”Hello Closure”
+变量环境(The VariableEnvironment)和文法环境的作用基本相似，具体的区别请参看ECMAScript的规范文档。</p>
+
+<h2 id="闭包的样列">闭包的样列</h2>
+
+<p>前面的我大致了解了Javascript闭包是什么，闭包在Javascript是怎么实现的。下面我们通过针对一些例子来帮助大家更加深入的理解闭包，下面共有5个样例，例子来自于JavaScript Closures For Dummies(镜像)。</p>
+
+<h3 id="例子1闭包中局部变量是引用而非拷贝">例子1:闭包中局部变量是引用而非拷贝</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">say667</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Local variable that ends up within closure</span>
+    <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">666</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">sayAlert</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="p">}</span>
+    <span class="nx">num</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">sayAlert</span><span class="p">;</span>
+<span class="p">}</span>
+ 
+<span class="kd">var</span> <span class="nx">sayAlert</span> <span class="o">=</span> <span class="nx">say667</span><span class="p">();</span>
+<span class="nx">sayAlert</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>因此执行结果应该弹出的667而非666。</p>
+
+<h3 id="例子2多个函数绑定同一个闭包因为他们定义在同一个函数内">例子2：多个函数绑定同一个闭包，因为他们定义在同一个函数内。</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setupSomeGlobals</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Local variable that ends up within closure</span>
+    <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">666</span><span class="p">;</span>
+    <span class="c1">// Store some references to functions as global variables</span>
+    <span class="nx">gAlertNumber</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="p">}</span>
+    <span class="nx">gIncreaseNumber</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">num</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">gSetNumber</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">setupSomeGlobals</span><span class="p">();</span> <span class="c1">// 为三个全局变量赋值</span>
+<span class="nx">gAlertNumber</span><span class="p">();</span> <span class="c1">//666</span>
+<span class="nx">gIncreaseNumber</span><span class="p">();</span>
+<span class="nx">gAlertNumber</span><span class="p">();</span> <span class="c1">// 667</span>
+<span class="nx">gSetNumber</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span><span class="c1">//</span>
+<span class="nx">gAlertNumber</span><span class="p">();</span><span class="c1">//12</span>
+</code></pre></div></div>
+
+<h3 id="例子3当在一个循环中赋值函数时这些函数将绑定同样的闭包">例子3：当在一个循环中赋值函数时，这些函数将绑定同样的闭包</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">buildList</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">item</span> <span class="o">=</span> <span class="s1">'item'</span> <span class="o">+</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+        <span class="nx">result</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="nx">item</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">])}</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+<span class="p">}</span>
+ 
+<span class="kd">function</span> <span class="nx">testList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">fnlist</span> <span class="o">=</span> <span class="nx">buildList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]);</span>
+    <span class="c1">// using j only to help prevent confusion - could use i</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">fnlist</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">fnlist</span><span class="p">[</span><span class="nx">j</span><span class="p">]();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>testList的执行结果是弹出item3 undefined窗口三次，因为这三个函数绑定了同一个闭包，而且item的值为最后计算的结果，但是当i跳出循环时i值为4，所以list[4]的结果为undefined.</p>
+
+<h3 id="例子4外部函数所有局部变量都在闭包内即使这个变量声明在内部函数定义之后">例子4：外部函数所有局部变量都在闭包内，即使这个变量声明在内部函数定义之后。</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sayAlice</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">sayAlert</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">alice</span><span class="p">);</span> <span class="p">}</span>
+    <span class="c1">// Local variable that ends up within closure</span>
+    <span class="kd">var</span> <span class="nx">alice</span> <span class="o">=</span> <span class="s1">'Hello Alice'</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">sayAlert</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">helloAlice</span><span class="o">=</span><span class="nx">sayAlice</span><span class="p">();</span>
+<span class="nx">helloAlice</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>执行结果是弹出”Hello Alice”的窗口。即使局部变量声明在函数sayAlert之后，局部变量仍然可以被访问到。</p>
+
+<h3 id="例子5每次函数调用的时候创建一个新的闭包">例子5：每次函数调用的时候创建一个新的闭包</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">newClosure</span><span class="p">(</span><span class="nx">someNum</span><span class="p">,</span> <span class="nx">someRef</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Local variables that end up within closure</span>
+    <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">someNum</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">anArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+    <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nx">someRef</span><span class="p">;</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">num</span> <span class="o">+=</span> <span class="nx">x</span><span class="p">;</span>
+        <span class="nx">anArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">'num: '</span> <span class="o">+</span> <span class="nx">num</span> <span class="o">+</span>
+        <span class="s1">'</span><span class="err">\</span><span class="s1">nanArray '</span> <span class="o">+</span> <span class="nx">anArray</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span>
+        <span class="s1">'</span><span class="err">\</span><span class="s1">nref.someVar '</span> <span class="o">+</span> <span class="nx">ref</span><span class="p">.</span><span class="nx">someVar</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">closure1</span> <span class="o">=</span> <span class="nx">newClosure</span><span class="p">(</span><span class="mi">40</span><span class="p">,{</span><span class="na">someVar</span><span class="p">:</span><span class="s1">'closure 1'</span><span class="p">});</span>
+<span class="nx">closure2</span> <span class="o">=</span> <span class="nx">newClosure</span><span class="p">(</span><span class="mi">1000</span><span class="p">,{</span><span class="na">someVar</span><span class="p">:</span><span class="s1">'closure 2'</span><span class="p">});</span>
+<span class="nx">closure1</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// num:45 anArray[1,2,3,45] ref:'someVar closure1'</span>
+<span class="nx">closure2</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">);</span><span class="c1">// num:990 anArray[1,2,3,990] ref:'someVar closure2'</span>
+</code></pre></div></div>
+
+<h3 id="闭包的应用---singleton-单例模式">闭包的应用 - Singleton 单例模式：</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">singleton</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">privateVariable</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">privateFunction</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">...</span><span class="nx">privateVariable</span><span class="p">...</span>
+    <span class="p">}</span>
+ 
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">firstMethod</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">...</span><span class="nx">privateVariable</span><span class="p">...</span>
+        <span class="p">},</span>
+        <span class="na">secondMethod</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+            <span class="p">...</span><span class="nx">privateFunction</span><span class="p">()...</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">}();</span>
+</code></pre></div></div>
+
+<p>这个单例模式通过闭包来实现。通过闭包完成了私有的成员和方法的封装。匿名主函数返回一个对象。
+对象包含了两个方法，方法1可以方法私有变量，方法2访问内部私有函数。
+需要注意的地方是匿名主函数结束的地方的’()’，如果没有这个’()’就不能产生单例。因为匿名函数只能返回了唯一的对象，而且不能被其他地方调用。这个就是利用闭包产生单例的方法。</p>
+
+      </article>
+      <div class="share">
+        <div class="share-component"></div>
+      </div>
+      <!--<div class="comment">
+      
+
+  
+
+  
+
+
+    </div>-->
+    </div>
+    <div class="column one-fourth">
+      
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+ 
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+    </div>
+  </div>
+</section>
+<!-- /section.content -->
+<footer class="container">
+    <div class="site-footer" role="contentinfo">
+        <div class="copyright left mobile-block">
+            © 2018
+            <span title="Naico Wang">Naico Wang</span>
+            <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+        </div>
+
+        <ul class="site-footer-links right mobile-hidden">
+            <li>
+                <a href="javascript:window.scrollTo(0,0)">TOP</a>
+            </li>
+        </ul>
+        <a href="http://github.com/naico/naico.github.io" target="_blank" aria-label="view source code">
+            <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+        </a>
+        <ul class="site-footer-links mobile-hidden">
+            
+            <li>
+                <a href="http://localhost:4000/" title="首页" target="">首页</a>
+            </li>
+            
+            <li>
+                <a href="http://localhost:4000/categories/" title="分类" target="">分类</a>
+            </li>
+            
+            <li>
+                <a href="http://localhost:4000/wiki/" title="维基" target="">维基</a>
+            </li>
+            
+            <li>
+                <a href="http://localhost:4000/links/" title="链接" target="">链接</a>
+            </li>
+            
+            <li>
+                <a href="http://localhost:4000/about/" title="关于" target="">关于</a>
+            </li>
+            
+            <li>
+                <a href="http://localhost:4000/feed.xml">
+                    <span class="octicon octicon-rss" style="color:orange;"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</footer>
+<!-- / footer -->
+<script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+<script src="http://localhost:4000/assets/js/geopattern.js"></script>
+<script src="http://localhost:4000/assets/js/prism.js"></script>
+<link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+<script>
+    jQuery(document).ready(function ($) {
+        // geopattern
+        $('.geopattern').each(function () {
+            $(this).geopattern($(this).data('pattern-id'));
+        });
+        // hljs.initHighlightingOnLoad();
+    });
+</script>
+
+   
+<div style="display:none">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</div>
+
+</body>
+
+</html>

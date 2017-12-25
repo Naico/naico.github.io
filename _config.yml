@@ -4,10 +4,10 @@
 baseurl:
 url: http://naico.wang
 date_format: "ordinal"
-title: 一口奶
+title: Naico
 subtitle: "科技改变生活"
 description: "Naico的个人博客"
-keywords: 一口奶, 奶一口, Naico Wang
+keywords: 奶一口, Naico Wang
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5

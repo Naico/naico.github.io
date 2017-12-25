@@ -1,18 +1,15 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
-comments: true
+description: Naico的后花园
+keywords: Naico
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
-
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
+Naico Wang
+生活在上海的底层码农。
+Live for coding...
 
 ## 联系
 
