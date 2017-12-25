@@ -28,23 +28,23 @@ email: wanghy1984@gmail.com
 navs:
   -
     href: /
-    label: 首页
+    label: Index
 
   -
     href: /categories/
-    label: 分类
+    label: Categories
 
   -
     href: /wiki/
-    label: 维基
+    label: My Wiki
 
   -
     href: /links/
-    label: 链接
+    label: Hypelinks
 
   -
     href: /about/
-    label: 关于
+    label: About Me
 
 # ---------------- #
 #       RSS        #
