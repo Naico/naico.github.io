@@ -196,7 +196,7 @@ JS 在创建对象（不论是普通对象还是函数对象）的时候，都�
 person1.__proto__ == Person.prototype
 
 请看下图：
-![](/assets/images/proto.jpg)
+![](/images/blog/proto.jpg)
 
 根据上面这个连接图，我们能得到：
 
@@ -248,7 +248,7 @@ d.__proto__ === Function.prototype;
 ```
 
 这些构造器都是函数对象：
-![](/assets/images/constructor.jpg)
+![](/images/blog/constructor.jpg)
 
 ## 原型链
 
