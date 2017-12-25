@@ -1,0 +1,127 @@
+--- layout: default ---
+<section class="collection-head small geopattern" data-pattern-id="Windows 界面相关小知识">
+  <div class="container">
+    <div class="columns">
+      <div class="column three-fourths">
+        <div class="collection-title">
+          <h1 class="collection-header">Windows 界面相关小知识点</h1>
+          <div class="collection-info">
+            
+            <span class="meta-info">
+              <span class="octicon octicon-calendar"></span> 2013/04/18
+            </span>
+             
+            <span class="meta-info">
+              <span class="octicon octicon-file-directory"></span>
+              <a href="http://localhost:4000/categories/#Windows" title="Windows">Windows</a>
+            </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+  <div class="columns">
+    <div class="column three-fourths">
+      <article class="article-content markdown-body">
+        <ol>
+  <li>
+    <p>禁止 Win7 下窗口被拖到顶部时自动飘到左上角</p>
+
+    <p>去掉窗口的 WS_THICKFRAME 风格</p>
+  </li>
+  <li>
+    <p>将最小化或者不是在最前面的窗口激活到前面</p>
+
+    <p>SwitchToThisWindow</p>
+  </li>
+  <li>
+    <p>禁止双击标题栏最大化窗口</p>
+
+    <p>屏蔽 WM_NCLBUTTONDBLCLK 消息</p>
+  </li>
+  <li>
+    <p>禁止 XP 下右键任务栏的「最大化」菜单项</p>
+
+    <p>去掉窗口的 WS_MAXIMIZEBOX 风格</p>
+  </li>
+  <li>
+    <p>在任务管理器下「应用程序」标签栏不显示程序，但是在「进程」里显示进程</p>
+
+    <p>一个可能的原因是窗口标题为空</p>
+  </li>
+  <li>
+    <p>在 XP 任务栏右键无菜单，在 Win7 任务栏右键只有一个关闭项</p>
+
+    <p>给窗口添加 WS_SYSMENU 风格</p>
+  </li>
+  <li>
+    <p>程序的系统托盘图标右键菜单不消失</p>
+
+    <p>在<code class="highlighter-rouge">menu.TrackPopupMenu</code>前调用<code class="highlighter-rouge">SetForegroundWindow(m_hWnd)</code></p>
+  </li>
+  <li>
+    <p>子窗口显示 / 不显示任务栏图标</p>
+
+    <p>通过<code class="highlighter-rouge">SetWindowLong</code>修改窗口的扩展风格，WS_EX_APPWINDOW 是显示，WS_EX_TOOLWINDOW 是不显示。</p>
+  </li>
+</ol>
+
+      </article>
+      <div class="share">
+        <div class="share-component"></div>
+      </div>
+      <!--<div class="comment">
+      
+
+  
+
+  
+
+
+    </div>-->
+    </div>
+    <div class="column one-fourth">
+      
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/jekyll-search.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://localhost:4000/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+ 
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+    </div>
+  </div>
+</section>
+<!-- /section.content -->
