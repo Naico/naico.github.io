@@ -1,5 +1,5 @@
 ---
-layout: defaultcn
+layout: post
 title: 个人简历 - 王宏宇(Naico)
 ---
 # 个人信息
