@@ -32,19 +32,19 @@ navs:
 
   -
     href: /categories/
-    label: Categories
+    label: 分类
 
   -
     href: /wiki/
-    label: My Wiki
+    label: 维基
 
   -
     href: /links/
-    label: Hypelinks
+    label: 链接
 
   -
     href: /about/
-    label: About Me
+    label: 关于
 
 # ---------------- #
 #       RSS        #
