@@ -4,7 +4,7 @@ title: Categories
 description: 分类库
 keywords: 分类
 comments: false
-menu: 分类
+menu: Categories
 permalink: /categories/
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: About
 description: Naico的后花园
 keywords: Naico
-menu: 关于
+menu: About Me
 permalink: /about/
 ---
 
