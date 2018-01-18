@@ -6,6 +6,9 @@ description: Javascript原型相关知识以及深入与理解。
 keywords: Javascript
 ---
 
+我们知道在Javascript中，万物皆对象，但对象也是有区别的。
+对象分为普通对象和函数对象，Object 、Function 是 JS 自带的函数对象。
+
 # 万物皆是对象
 
 ## 普通对象和函数对象
