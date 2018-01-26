@@ -39,4 +39,6 @@ In a word, GTM is a combined container collection which will be more powerful an
 # How to implement GTM and GA?
 
 Please refer to the following link for more details:
-https://support.google.com/tagmanager/answer/6102821?hl=en&ref_topic=3441530
+[Link](https://support.google.com/tagmanager/answer/6102821?hl=en&ref_topic=3441530)
+
+[Link](http://www.alex-feng.com/home?from=http://naico.wang)
