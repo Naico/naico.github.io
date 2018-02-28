@@ -42,4 +42,4 @@ Please refer to the following link for more details:
 [Link](https://support.google.com/tagmanager/answer/6102821?hl=en&ref_topic=3441530)
 
 [Link](http://westore.farfetch.cn/home?utm_source=analystics_test&utm_medium=referral&utm_campaigns=FF_PROMO_TEST)
-[Link to Alex-Feng](http://www.alex-feng.com/home?clickref=1101l4DdogWv&utm_source=farfetch_test_publisher&utm_medium=affiliate&utm_campaign=PHCN&utm_term=CNNetwork&pid=performancehorizon_int&c=farfetch_test_publisher&clickid=1101l4DdogWv&af_siteid=1011l11081&af_sub_siteid=1011l267&af_cost_model=CPA&af_channel=affiliate&is_retargeting=true)
+[Link to Alex-Feng](http://www.alex-feng.com/home?clickref=1101l4DdogWv&utm_source=farfetch_test_publisher&utm_medium=affiliate&utm_campaign=PHCN&utm_term=CNNetwork)
