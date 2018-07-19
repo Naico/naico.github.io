@@ -45,4 +45,6 @@ Please refer to the following link for more details:
 
 [Link to Alex-Feng](http://www.alex-feng.com/home?utm_source=wechat&utm_medium=affiliate&utm_campaign=PHCN)
 
+[Link to DEV](http://westore-dev.farfetch.net/home?utm_source=ipinyou&utm_medium=display&utm_campaign=CN_WeChatMP_PROS_WeChatStoreX20_Link)
+
 [PH Link Test](http://www.alex-feng.com/home?clickref=1101l4DeH6ir&utm_source=test_george&utm_medium=affiliate&utm_campaign=PHCN&utm_term=CNNetwork&pid=performancehorizon_int&c=test_george&clickid=1101l4DeH6ir&af_siteid=1100l17836&af_sub_siteid=1011l267&af_cost_model=CPA&af_channel=affiliate&is_retargeting=true)
