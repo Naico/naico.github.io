@@ -1,88 +1,35 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl:
-url: http://naico.wang
-date_format: "ordinal"
-title: "码农那些事"
-subtitle: "苟利国家生死以，岂因祸福避趋之"
-description: "Naico的个人博客"
-keywords: 奶一口, Naico Wang
-timezone: Asia/Shanghai
-encoding: "utf-8"
-side_bar_repo_limit: 5
-
-# ---------------- #
-#      Author      #
-# ---------------- #
+title: 苟利国家生死以，岂因祸福避趋之
 author: Naico Wang
-organization: Farfetch
-organization_url: http://www.Farfetch.cn
-github_username: naico
-location: Shanghai, China
 email: wanghy1984@gmail.com
+description: Naico.Wang Working @ Farfetch
+show_excerpts: true # set to true to show excerpts on the homepage
+paginate: 10
+paginate_path: "/:num/"
 
-# ---------------- #
-#    Navigation    #
-# ---------------- #
-navs:
-  -
-    href: /
-    label: Index
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+plainwhite:
+  name: Naico Wang
+  tagline: Engineer
+  location: Shanghai,China
+  date_format: "%Y-%m-%d"
+  sitemap: true # set to true to generate sitemap.xml content
 
-  -
-    href: /categories/
-    label: Categories
+  # generate social links in footer
+  social_links:
+    twitter: naicowanghy
+    github:  naico
+    linkedIn: naico
 
-  -
-    href: /wiki/
-    label: Wiki
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+header_pages:
+ - about.html
 
-  -
-    href: /links/
-    label: Hyperlinks
+# Build settings
+theme: plainwhite
 
-  -
-    href: /about/
-    label: About Me
-
-# ---------------- #
-#       RSS        #
-# ---------------- #
-subscribe_rss: /feed.xml
-
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
-markdown: kramdown
-kramdown:
-    input: GFM
-highlighter: rouge
-paginate: 8
-lsi: false
-quiet: false
-excerpt_separator: "\n\n"
-permalink: /:year/:month/:day/:title/
-gems:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
-#     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
-
-repository: naico/
-
-
-
-# ---------------- #
-#    Analytics     #
-# ---------------- #
-google:
-    analytics_id: UA-112465344-1
+plugins:
+  - jekyll-paginate

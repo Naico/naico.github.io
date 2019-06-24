@@ -1,0 +1,26 @@
+---
+layout: page
+title: 文章存档列表
+permalink: /archive/
+---
+
+<section class="archive-post-list">
+  {% for post in site.posts %}
+  {% assign currentDate = post.date | date: "%Y" %}
+  {% if currentDate != myDate %}
+  <div class="collection-title"><i class="icon-calendar"></i>{{ currentDate }}年</div>
+    {% assign myDate = currentDate %}
+    {% endif %}
+    <article>
+      <header class="post-header">
+        <span class="create-date">{{ post.date | date: "%m-%d" }}</span>
+        <span class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+        <div class="excerpt">
+          {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+          {%- endif -%}
+        </div>
+      </header>
+    </article>
+  {% endfor %}
+</section>

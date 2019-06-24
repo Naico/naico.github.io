@@ -1,3 +1,45 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/index"><i class="icon-home"></i>首页</a></li>
+      <li><a href="/archive"><i class="icon-archive"></i>存档</a></li>
+      <li><a href="/tags"><i class="icon-tags"></i>标签</a></li>
+      <li><a href="/about"><i class="icon-user"></i>关于</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="container">
+  <section class="about">
+    <img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+    <h2>{{ site.plainwhite.name }}</h2>
+    <p class="tagline">{{ site.plainwhite.tagline }}</p>
+    <p class="location"><i class="icon-location-circled"></i>{{ site.plainwhite.location }}</p>
+    <ul class="social">
+      <a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
+      <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}"><li><i class="icon-linkedin-circled"></i></li></a>
+      <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}"><li><i class="icon-twitter-circled"></i></li></a>
+    </ul>
+    <p class="copyright">&copy; 2019</p>
+  </section>
+  <section class="content">
     {{ content }}
-{% include footer.html %}
+  </section>
+</main>
+{%- if site.plainwhite.analytics_id -%}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.plainwhite.analytics_id }}');
+</script>
+{%- endif -%}
+</body>
+</html>

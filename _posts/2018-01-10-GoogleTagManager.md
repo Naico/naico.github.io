@@ -3,7 +3,7 @@ layout: post
 title: Google Tag Manager and Google Analystics
 categories: Javascript
 description: A brief instruction to GTM and GA
-keywords: Javascript,GTM,Google Tag Manager,Google Analystics
+tags: Google-Tag-Manager Google-Analystics
 ---
 
 Our team are now working on adding google tracking code to track user behavior or other targeted params, to collect user behavior and user preference.

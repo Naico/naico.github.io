@@ -3,7 +3,7 @@ layout: post
 title: Javascript Prototype Chain
 categories: Javascript
 description: Javascript原型相关知识以及深入与理解。
-keywords: Javascript
+tags: Javascript
 ---
 
 我们知道在Javascript中，万物皆对象，但对象也是有区别的。
