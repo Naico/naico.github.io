@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Google Tag Manager and Google Analystics</title>
+<!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>Google Tag Manager and Google Analystics - 苟利国家生死以，岂因祸福避趋之</title>
+<meta property="og:title" content="Google Tag Manager and Google Analystics" />
+<meta name="description" content="A brief instruction to GTM and GA" />
+<meta property="og:description" content="A brief instruction to GTM and GA" />
+<link rel="canonical" href="http://localhost:4000/javascript/2018/01/10/GoogleTagManager.html" />
+<meta property="og:url" content="http://localhost:4000/javascript/2018/01/10/GoogleTagManager.html" />
+<meta property="og:site_name" content="苟利国家生死以，岂因祸福避趋之" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-10T00:00:00+08:00" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Google Tag Manager and Google Analystics",
+"datePublished": "2018-01-10T00:00:00+08:00",
+"description": "A brief instruction to GTM and GA",
+"url": "http://localhost:4000/javascript/2018/01/10/GoogleTagManager.html"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="/index"><i class="icon-home"></i>首页</a></li>
+      <li><a href="/archive"><i class="icon-archive"></i>存档</a></li>
+      <li><a href="/tags"><i class="icon-tags"></i>标签</a></li>
+      <li><a href="/about"><i class="icon-user"></i>关于</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="container">
+  <section class="about">
+    <img src="/assets/portfolio.png" alt="Naico Wang">
+    <h2>Naico Wang</h2>
+    <p class="tagline">Engineer</p>
+    <p class="location"><i class="icon-location-circled"></i>Shanghai,China</p>
+    <ul class="social">
+      <a href="https://github.com/naico"><li><i class="icon-github-circled"></i></li></a>
+      <a href="https://www.linkedin.com/naico"><li><i class="icon-linkedin-circled"></i></li></a>
+      <a href="https://twitter.com/naicowanghy"><li><i class="icon-twitter-circled"></i></li></a>
+    </ul>
+    <p class="copyright">&copy; 2019</p>
+  </section>
+  <section class="content">
+    <div class="post-container">
+  <h2 class="post-title">Google Tag Manager and Google Analystics</h2>
+  <div class="post-meta">
+    <ul class="post-categories"><li><a href="/tags/#Google-Tag-Manager"><i class="icon-tags"></i> Google-Tag-Manager</a></li><li><a href="/tags/#Google-Analystics"><i class="icon-tags"></i> Google-Analystics</a></li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>2018-01-10</div>
+  </div>
+  <div class="post">
+    <p>Our team are now working on adding google tracking code to track user behavior or other targeted params, to collect user behavior and user preference.</p>
+
+<p>During this working period, we met some strange behavior for the 2 features. We gathered them as question and answer and generated the list here, to help the one who is or will be working on the related feature.</p>
+
+<p>In this article, we will use GTM and GA to abridge the two features.</p>
+
+<p>If you met more strange issues, then please help to contribute to this article.</p>
+
+<h1 id="what-is-gtm-and-ga">What is GTM and GA?</h1>
+<p>Google Analytics is well known as a famous analyst tool published by google inc. Now the project is expanded to a whole analysis system named as Google Analytics Solution.</p>
+
+<blockquote>
+  <p>Google Analytics is a powerful analytics solution for companies of all shape and size.</p>
+</blockquote>
+
+<p>Google Tag Manager is a new feature under Google Analytics Solution and it is used to combine all kinds of Google Analytics Features.</p>
+
+<blockquote>
+  <p>Google Tag Manager offers simple, yet powerful tag management solutions to help small businesses and large enterprises launch programs faster.</p>
+</blockquote>
+
+<p>So we can see that GTM is a container feature, and GA is a application feature which can be ‘plugin into’ GTM container.</p>
+
+<h1 id="why-using-gtm-instead-of-ga">Why using GTM instead of GA?</h1>
+<p>In the previous version, if we want to include GA to your solution, we need to insert a certain script section to you website and config the needed parameters.</p>
+
+<p>Meanwhile, if you want to add more 3rd party analytics tools powered by google, you need to add more code section to your solution. This is really wired.</p>
+
+<p>GTM came out to be a successful solution to include all of these kind of features. Once you implemented the GTM to your website solution, you are able to including all the supported features by changing the config in the tag manager website.</p>
+
+<p>Each feature is recognized as a Container, and inside the container, we will have different tags to tracking different types of tracking params.</p>
+
+<p>In a word, GTM is a combined container collection which will be more powerful and less code injection to your website.</p>
+
+<h1 id="how-to-implement-gtm-and-ga">How to implement GTM and GA?</h1>
+
+<p>Please refer to the following link for more details:
+<a href="https://support.google.com/tagmanager/answer/6102821?hl=en&amp;ref_topic=3441530">Link</a></p>
+
+<p><a href="http://westore.farfetch.cn/home?utm_source=analystics_test&amp;utm_medium=referral&amp;utm_campaigns=FF_PROMO_TEST">Link</a></p>
+
+<p><a href="http://www.alex-feng.com/home?utm_source=wechat&amp;utm_medium=affiliate&amp;utm_campaign=PHCN">Link to Alex-Feng</a></p>
+
+<p><a href="http://westore-dev.farfetch.net/home?utm_source=ipinyou&amp;utm_medium=display&amp;utm_campaign=CN_WeChatMP_PROS_WeChatStoreX20_Link">Link to DEV</a></p>
+
+<p><a href="http://www.alex-feng.com/home?clickref=1101l4DeH6ir&amp;utm_source=test_george&amp;utm_medium=affiliate&amp;utm_campaign=PHCN&amp;utm_term=CNNetwork&amp;pid=performancehorizon_int&amp;c=test_george&amp;clickid=1101l4DeH6ir&amp;af_siteid=1100l17836&amp;af_sub_siteid=1011l267&amp;af_cost_model=CPA&amp;af_channel=affiliate&amp;is_retargeting=true">PH Link Test</a></p>
+
+  </div>
+  </section>
+</main></body>
+</html>
