@@ -9,6 +9,11 @@
             <lastmod>2019-06-07T00:00:00+00:00</lastmod>
             <priority>1.00</priority>
         </url><url>
+                <loc>http://localhost:4000/git/2018/01/13/Git-Command-List.html</loc>
+                <lastmod>2018-01-13T00:00:00+08:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
                 <loc>http://localhost:4000/javascript/2018/01/10/GoogleTagManager.html</loc>
                 <lastmod>2018-01-10T00:00:00+08:00</lastmod>
                 <changefreq>weekly</changefreq>

@@ -742,15 +742,25 @@ main {
 .post-container {
   padding-left: 40px; }
 
+.post-list {
+  color: #222;
+  line-height: 1.9em; }
+  .post-list a {
+    color: #000;
+    text-decoration: none;
+    transition: border-bottom 0.4s; }
+    .post-list a:hover {
+      text-decoration: none; }
+
 .post {
   color: #222;
   line-height: 1.9em; }
   .post a {
-    color: #000;
+    color: #2879d0;
     text-decoration: none;
     transition: border-bottom 0.4s; }
     .post a:hover {
-      text-decoration: none; }
+      text-decoration: underline; }
 
 #posts-label {
   border-bottom: 1px solid #eee;
@@ -889,8 +899,12 @@ main {
       .archive-post-list article .post-header .post-title {
         line-height: 1.2rem;
         font-size: 20px; }
+        .archive-post-list article .post-header .post-title a {
+          color: #222; }
         .archive-post-list article .post-header .post-title a:hover {
-          text-decoration: underline double; }
+          color: #268bd2;
+          text-decoration: none;
+          transition: color 0.5s; }
       .archive-post-list article .post-header .excerpt {
         padding: 1rem; }
         .archive-post-list article .post-header .excerpt p {

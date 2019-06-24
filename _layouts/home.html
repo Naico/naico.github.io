@@ -24,11 +24,11 @@ layout: default
       </ul>
       <div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
     </div>
-    <div class="post">
-      {%- if site.show_excerpts -%}
+    {%- if site.show_excerpts -%}
+    <div class="post-list">
       {{ post.excerpt }}
-      {%- endif -%}
     </div>
+    {%- endif -%}
   </li>
   {%- endfor -%}
 </ul>

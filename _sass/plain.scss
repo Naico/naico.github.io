@@ -194,7 +194,7 @@ main {
 .post-container {
   padding-left: 40px;
 }
-.post {
+.post-list {
   color: #222;
   line-height: 1.9em;
   a {
@@ -203,6 +203,18 @@ main {
     transition: border-bottom 0.4s;
     &:hover {
       text-decoration: none;
+    }
+  }
+}
+.post {
+  color: #222;
+  line-height: 1.9em;
+  a {
+    color: #2879d0;
+    text-decoration: none;
+    transition: border-bottom 0.4s;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
@@ -371,8 +383,13 @@ main {
       .post-title {
         line-height: 1.2rem;
         font-size: 20px;
+        a {
+          color: #222;
+        }
         a:hover {
-          text-decoration: underline double;
+          color: #268bd2;
+          text-decoration: none;
+          transition: color 0.5s;
         }
       }
       .excerpt {
