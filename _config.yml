@@ -1,6 +1,7 @@
 title: 苟利国家生死以，岂因祸福避趋之
 author: Naico Wang
 email: wanghy1984@gmail.com
+website: https://naico.wang
 description: Naico.Wang Working @ Farfetch
 show_excerpts: true # set to true to show excerpts on the homepage
 paginate: 10
@@ -33,3 +34,48 @@ theme: plainwhite
 
 plugins:
   - jekyll-paginate
+
+about:
+  name: Naico Wang
+  email: wanghy1984@gmail.com
+  tagline: Engineer
+  website: https://naico.wang
+  linkedin: naico
+  github: naico
+  twitter: naicowanghy
+  languages:
+    - idiom: HTML/CSS
+      level: Familiar
+
+    - idiom: Javascript
+      level: Familiar
+
+    - idiom: ASP.NET/C#
+      level: Familiar
+  education:
+    - degree: MSc in Computer Science
+      university: University of London
+      time: 2011 - 2012
+  career-profile:
+    title: Career Profile
+    summary: |
+      A former .NET Engineer and now Front-end Engineer.
+
+      A father.
+
+      A life-lover.
+  experiences:
+    - role: Senior Software Engineer
+      time: 2018.1 - Present
+      company: FARFETCH
+      details: |
+
+    - role: Senior Software Engineer
+      time: 2012.9 - 2018.1
+      company: Mercer China
+      details: |
+
+    - role: Senior Software Engineer
+      time: 2009.6 - 2012.9
+      company: ChinaSoft
+      details: |

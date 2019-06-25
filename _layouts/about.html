@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/css/about.css" | relative_url }}">
+  <title>{{ page.title | default: site.title }}</title>
+</head>
+<body>
+<div class="wrapper">
+  <div class="sidebar-wrapper">
+    <div class="profile-container">
+      <a href="/index"><img class="avatar" src="/assets/portfolio.png" alt="profile picture" /></a>
+      <h1 class="name">{{ site.about.name }}</h1>
+      <h3 class="tagline">{{ site.about.tagline }}</h3>
+    </div>
+
+    <div class="contact-container container-block">
+      <ul class="contact-list">
+        <li class="email"><i class="icon-mail"></i>
+          <a href="mailto:{{ site.about.email }}">{{ site.about.email }}</a>
+        </li>
+<!--        <li class="phone"><i class="icon-phone-outline"></i>-->
+<!--          <a href="tel:{{ site.about.phone }}">{{ site.about.phone }}</a>-->
+<!--        </li>-->
+        <li class="website"><i class="icon-blogger"></i>
+          <a href="http://{{ site.about.website }}" target="_blank">{{ site.about.website }}</a>
+        </li>
+        <li class="linkedin"><i class="icon-linkedin-circled"></i>
+          <a href="https://linkedin.com/in/{{ site.about.linkedin }}" target="_blank">{{ site.about.linkedin }}</a>
+        </li>
+        <li class="github"><i class="icon-github-circled"></i>
+          <a href="http://github.com/{{ site.about.github }}" target="_blank">{{ site.about.github }}</a>
+        </li>
+        <li class="twitter"><i class="icon-twitter-circled"></i>
+          <a href="https://twitter.com/{{ site.about.twitter }}" target="_blank">{{ site.about.twitter }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="education-container container-block">
+      <h2 class="container-block-title">
+        Education
+      </h2>
+      {% for graduation in site.about.education %}
+      <div class="item">
+        <h4 class="degree">{{ graduation.degree }}</h4>
+        <h5 class="meta">{{ graduation.university }}</h5>
+        <div class="time">{{ graduation.time }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if site.about.languages %}
+    <div class="languages-container container-block">
+      <h2 class="container-block-title">
+        Technical Skills
+      </h2>
+      <ul class="interests-list">
+        {%for language in site.about.languages %}
+        <li>
+          <i class="icon-angle-circled-right"></i>{{ language.idiom }}
+          <span class="lang-desc">({{ language.level }})</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% if site.about.interests %}
+    <div class="interests-container container-block">
+      <h2 class="container-block-title">
+        Interests
+      </h2>
+      <ul class="interests-list">
+        {% for interest in site.about.interests %}
+        <li><i class="icon-angle-circled-right"></i>{{ interest.item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  <div class="content-wrapper">
+    <section class="section summary-section">
+      <h2 class="section-title">
+        <i class="icon-user"></i>{{ site.about.career-profile.title }}
+      </h2>
+      <div class="summary">
+        {{ site.about.career-profile.summary | markdownify }}
+      </div>
+    </section>
+    <section class="section experiences-section">
+      <h2 class="section-title"><i class="icon-th-list"></i>Experiences</h2>
+      {% for experience in site.about.experiences %}
+      <div class="item">
+        <div class="meta">
+          <div class="upper-row">
+            <h3 class="job-title">{{ experience.role }}</h3>
+            <div class="time">{{ experience.time }}</div>
+          </div>
+          <div class="company">{{ experience.company }}</div>
+        </div>
+        {% if experience.details %}
+        <div class="details">
+          {{ experience.details | markdownify }}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+</div>
+</body>
+</html>
